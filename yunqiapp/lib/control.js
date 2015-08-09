@@ -1,15 +1,18 @@
-Router.configure({
-    layoutTemplate:'layout',
+
+Router.route('/', function () {
+  this.layout('layout');
+  this.render('home', {to: 'content'});
+
 });
 
-Router.route('/home', function () {
-  this.render('home');
-});
 
 Router.route('/profile', function () {
-  this.render('profile');
+  this.layout('layout');
+  this.render('profile', {to: 'content'});
+
 });
 
 Router.route('/more', function () {
-  this.render('more');
+    this.layout('layout');
+    this.render('more', {to: 'content'});
 });
