@@ -46,3 +46,8 @@ Router.route('/homedetail/yhq', function () {
     this.layout('indexdetailpagelayout',{data: {title: '优惠券'}});
     this.render('yhq', {to: 'detailpagecontent'});
 });
+
+Router.route('/profile/dz', function () {
+    this.layout('indexdetailpagelayout',{data: {title: '地址'}});
+    this.render('dz', {to: 'detailpagecontent'});
+});
