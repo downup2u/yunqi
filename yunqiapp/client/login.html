@@ -1,0 +1,29 @@
+<template name="login">
+ 
+ <div class="log_box">
+    <ul>
+         <li class="username">
+      <span> <i class="icon-user"></i> </span><input type="text" value="" placeholder="用户名" id="login-username" />
+      </li>
+      <li class="username">
+        <span> <i class="icon-key"></i> </span><input type="pas" value="" placeholder="密码" id="login-password" />
+      </li>
+     <!-- <li class="login_free">
+        <div>
+          <input id="Hidden1" type="hidden" value="1" />
+          <input type="checkbox" class="inputCheckbox" checked="checked" />
+          <label> 30天内自动登录</label>
+        </div>
+      </li>-->
+      <li class="btn_submit">
+        <button id="btnlogin">登 录</button>
+      </li>
+      <li class="reg_findpwd">
+        <a href="/createuser">免费注册</a>
+      <a href="/wjmm">忘记密码</a>
+      </li>
+       <p id="form-messages"></p>
+    </ul>
+  </div>
+
+	</template>
