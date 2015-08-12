@@ -496,7 +496,7 @@ html, body {
     font-family: "icomoon";
     font-style: normal;
     font-weight: normal;
-    src: url("http://m.fruitday.com/css/../fonts/icomoon.eot?#iefixuwr3mr") format("embedded-opentype"), url("http://m.fruitday.com/css/../fonts/icomoon.woff?uwr3mr") format("woff"), url("http://m.fruitday.com/css/../fonts/icomoon.ttf?uwr3mr") format("truetype"), url("http://m.fruitday.com/css/../fonts/icomoon.svg?uwr3mr#icomoon") format("svg");
+    src: url("fonts/icomoon.eot?#iefixuwr3mr") format("embedded-opentype"), url("fonts/icomoon.woff?uwr3mr") format("woff"), url("fonts/icomoon.ttf?uwr3mr") format("truetype"), url("fonts/icomoon.svg?uwr3mr#icomoon") format("svg");
 }
 .fdayicon {
     font-family: "icomoon";

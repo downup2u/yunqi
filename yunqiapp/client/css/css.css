@@ -1009,7 +1009,7 @@ a:hover {
 }.log_box{border-radius:5px;}
 .log_box .username {
 -webkit-appearance: textfield;
-	border: 1px solid #ddd;
+	border: 1px solid #ddd; background:#fff;
 	
 	border-radius: 5px; margin-bottom:10px;
 	display: block;
@@ -1022,7 +1022,7 @@ a:hover {
 	
 }
 .log_box .pwd {}
-.log_box .username i{ float:left; width:1em; height:0.8em; font-size:1.8em; color:#1b6ded; margin-top:0.2em; padding-right:0.5em}
+.log_box .username i{ float:left; width:1em; height:0.8em; font-size:1.8em; color:#1b6ded; margin-top:0.2em; }
 .log_box input{ font-size:1.2em
 	
 }

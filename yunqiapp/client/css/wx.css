@@ -2,7 +2,7 @@
 /*Explanation:Reset Styles*/
 
 html {height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%;-webkit-font-smoothing:antialiased; font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/ }
-body {margin:0; padding:0; color:#555; font-size: 1.4rem; background:#F0EFF4;font-family:Helvetica, sans-serif;}
+body {margin:0; padding:0; color:#555; font-size: 1.2em; background:#F0EFF4;font-family:Helvetica, sans-serif;}
 div,h1, h2, h3, h4, h5, h6, p, figure, form { margin:0;word-break:break-all; word-wrap:break-word;}
 i, em { font-style:normal; }
 table { border-collapse:collapse; border-spacing:0; }
@@ -172,8 +172,8 @@ Explanation: The station generic CSS style
 .initial_nav ul { overflow:hidden; padding-bottom:0rem; }
 .initial_nav ul li a{ padding-top:0.7rem; font-family:microsoft yahei;}
 .initial_nav li i { width:3rem; height:2.2rem; line-height:2.2rem; font-size:2.2rem; }
-.initial_nav li span { font-size:1.2rem; color:#555; display:block; }
-.header_region.clearfix .class_nav.initial_nav ul li  span { font-size:1.4rem
+.initial_nav li span { /*font-size:1.2rem;*/ color:#555; display:block; }
+.header_region.clearfix .class_nav.initial_nav ul li  span { 
 }
 /*导航固定顶部滚动后图标样式*/
 .scroll_nav ul { margin-top:1rem; overflow:hidden; padding-bottom:1rem; }

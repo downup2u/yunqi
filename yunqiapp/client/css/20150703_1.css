@@ -5,9 +5,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	border: 0;
 	-webkit-appearance: none;
 }
-html, body {
-    font-size: 20px;
-}
+
 html {
 	font-size: 62.5%
 }
@@ -34,11 +32,7 @@ ul li {
 a {
 	text-decoration: none;
 }
-img {
-	border: 0 none;
-	display: block;
-	width: 100%;
-}
+
 .hidden {
 	display: none;
 }
@@ -46,7 +40,7 @@ img {
 	color: #ff5a21;
 }
 .chang_mobileNum i {
-	background: url("../../common/img/19987d5f.icon_common.png") no-repeat;
+	background: url("common/img/19987d5f.icon_common.png") no-repeat;
 	background-size: 213px auto;
 }
 .wrap {
@@ -127,14 +121,14 @@ top:16px;
 	position: relative;
 }
 input {
-	border-radius: 3px;
+	/*border-radius: 3px;
 	-webkit-box-sizing: border-box;
 	width: 100%;
 	height: 40px;
 	padding: 0px 6px;
 	background-color: rgba(255,255,255,1);
 	color: #566197;
-	font-size: 1.4rem;
+	font-size: 1.4rem;*/
 }
 ::-webkit-input-placeholder {
 color:#566197;
@@ -407,7 +401,7 @@ color:#566197;
 	width: 320px;
 	height: 90px;
 	float: right;
-	background: url("../main/img/267a9e9e.shareTop.png") no-repeat;
+	background: url("main/img/267a9e9e.shareTop.png") no-repeat;
 	background-size: auto 90px;
 }
 .btns {
@@ -446,7 +440,7 @@ color:#566197;
 	height: 100%;
 }
 .result_receive, .result_over {
-	background: url("../main/img/7065acfd.icon_gardred_result.png") no-repeat;
+	background: url("main/img/7065acfd.icon_gardred_result.png") no-repeat;
 	background-size: 168px auto;
 	margin: 40px auto 37px;
 	color: #9e9e9e;
@@ -479,7 +473,7 @@ color:#566197;
 .result_noStarted:before {
 	content: "";
 	display: block;
-	background: url("../main/img/7065acfd.icon_gardred_result.png") no-repeat -76px -73px;
+	background: url("main/img/7065acfd.icon_gardred_result.png") no-repeat -76px -73px;
 	background-size: 168px auto;
 	width: 35px;
 	height: 58px;
@@ -549,7 +543,7 @@ color:#566197;
 	text-align: center;
 }
 .radio-wrap .checkbox, .radio-wrap .clicked {
-	background: url("../../common/img/19987d5f.icon_common.png") no-repeat;
+	background: url("common/img/19987d5f.icon_common.png") no-repeat;
 	background-size: 213px auto;
 }
 .radio-wrap {
@@ -577,15 +571,14 @@ color:#566197;
 	opacity: .3;
 }
 
-
 /*头部*/
 /** 顶部导航 **/
-.header{z-index:5;position:relative;top:0;left:0;margin:0 auto;overflow:hidden;width:100%;line-height:2.2em;background-color:#1b6ded;color:#fff; height:2.2em}
-.header .back{z-index:2;position:relative;float:left;height:2.2em;padding-left:1.5em;background:url(/images/back.png) no-repeat .75em center;background-size:auto 1em;font-size:1em;}
-.header .menu{z-index:2;position:relative;float:right;width:5em;height:2.2em;background-size:1em;line-height:2.7em; font-size:0.8em; transition:background .3s; color:#fff; 
+.header{z-index:5;position:relative;top:0;left:0;margin:0 auto;overflow:hidden;width:100%;line-height:40px;background-color:#1b6ded;color:#fff; height:40px}
+
+.header .menu{z-index:2;position:relative;float:right;width:5em;height:2.2em;background-size:1.5em;line-height:2.7em; font-size:0.8em; transition:background .3s; color:#fff; 
 }
-.header .menu.active{/*background-image:url(/images/menu-active.png);background-size: 0.8rem*/}
-.header .menu.active:after{content: " ";display: block;position: absolute;bottom: 0;width: 100%;height: .35em;/*background:url(/images/connect.png) no-repeat center 0;*/}
+.header .menu.active{/*background-image:url(images/menu-active.png);background-size: 0.8rem*/}
+.header .menu.active:after{content: " ";display: block;position: absolute;bottom: 0;width: 100%;height: .35em;/*background:url(images/connect.png) no-repeat center 0;*/}
 .header .h_label{position:absolute;width:100%;height:2.2em;text-align:center;font-weight:normal;color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;}
 
 
@@ -637,7 +630,7 @@ color:#566197;
 .coubox_m th {
     color: #8e0c3a;
     height: 60px;
-    padding-bottom: 20px; padding-top:10px; font-size:1.8em; background:url(/images/b.jpg) no-repeat center; background-size:2.3em 2.6em;
+    padding-bottom: 20px; padding-top:10px; font-size:1.8em; background:url(images/b.jpg) no-repeat center; background-size:2.3em 2.6em;
 }
 .cou_mon {
     font-size: 64px;

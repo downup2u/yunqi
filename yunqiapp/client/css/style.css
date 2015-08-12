@@ -24,7 +24,7 @@ body .mainmenu li a b{ display:block;  height:80px; padding-top:10px; }
 body .mainmenu li a img{ margin: 10px auto 0px;
 width: 70px;
 height:70px;}
-body .mainmenu li a span{ display:block; height:30px; padding-top:px; line-height:30px;  color: #333;padding-bottom:5px; font-size:1.3em; }
+body .mainmenu li a span{ display:block; height:30px; padding-top:px; line-height:30px;  color: #555;padding-bottom:5px; font-size:1.3em; font-weight:normal; }
 
 /*body .mainmenu li:nth-child(8n+1) {background-color:#36A1DB}
 body .mainmenu li:nth-child(8n+2) {background-color:#678ce1}
