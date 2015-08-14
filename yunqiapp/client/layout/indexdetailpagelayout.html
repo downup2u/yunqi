@@ -1,8 +1,8 @@
 <template name="indexdetailpagelayout">
-
-<header class="header"> <a href="javascript:history.back();" class="back"></a>
+ 
+<header class="header"> <a href="{{returnurl}}" class="back"></a>
   <div class="h_label">{{title}}</div>
-  <a href="/" class="menu"></a> </header>
+  <a href="{{returnhome}}" class="menu"></a> </header>
   
 <detailpagecontent>
     {{> yield "detailpagecontent"}}

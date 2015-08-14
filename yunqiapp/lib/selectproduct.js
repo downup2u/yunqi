@@ -7,9 +7,10 @@ if(Meteor.isClient){
         // 1. Collect the username and password from the form
        // var username = template.find('#login-username').value,
        //     password = template.find('#login-password').value;
-       //删除为0的选项    
-
-        Router.go("/homedetail/wyxd");
+       //删除为0的选项  
+       var tabindex = template.find('.tabindex').value;  
+        
+        Router.go("/homedetail/wyxd/" + tabindex);
     }
     
     });
@@ -71,16 +72,19 @@ if(Meteor.isClient){
    
   
     Template.producttype.helpers({
-      'sessionorderamount':function(){
+          'sessionorderamount':function(){
           var productlistsession = Session.get("productlistsession");
-          if(productlistsession == null){
-            return 0;
+           var amount = 0;
+          
+          if(productlistsession != null){
+           
+              for( j in productlistsession){
+                 amount += (productlistsession[j].productprice * productlistsession[j].qty);
+             };
           }
-          var amount = 0;
-          for( j in productlistsession){
-               amount += (productlistsession[j].productprice * productlistsession[j].qty);
-          };
+          console.log("sessionorderamount:" + amount);  
           return amount;
+      
       },
       'products': function () {
           //来自db

@@ -11,15 +11,20 @@
     <section class="content">
       <div class="block">
         <div class="cart_list">
+
+
            {{#if curtab is "0"}}
              {{> allorders}}
-           {{/if}}
-           {{#if curtab is "1"}}
-             {{> alltobedeliveryorders}}
-           {{/if}}
-           {{#if curtab is "2"}}
-             {{> allclosedorders}}
+             {{else}}
+                {{#if curtab is "1"}}
+                 {{> alltobedeliveryorders}}
+                 {{else}}
+                 {{#if curtab is "2"}}
+                 {{> allclosedorders}}
+              {{/if}}
            {{/if}}            
+           {{/if}}
+         
          
         </div>
       </div>
