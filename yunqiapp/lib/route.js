@@ -94,37 +94,59 @@ Router.route('/homedetail/wddd/:_tabindex/:_id', function () {
     this.layout('indexdetailpagelayout',{data: {title: '我的订单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
     if(this.params._id == "0"){       
-        this.render('tabheader0', {to: 'tabheader'});
-        this.render('allorders', {to: 'orderscontent'});
+        this.render('tabheader0', {to: 'tabheader',data:{tabindex:this.params._tabindex}});
+        this.render('allorders', {to: 'orderscontent',data:{tabindex:this.params._tabindex}});
     }
     else if(this.params._id == "1"){
-        this.render('tabheader1', {to: 'tabheader'});
-        this.render('alltobedeliveryorders', {to: 'orderscontent'});
+        this.render('tabheader1', {to: 'tabheader',data:{tabindex:this.params._tabindex}});
+        this.render('alltobedeliveryorders', {to: 'orderscontent',data:{tabindex:this.params._tabindex}});
     }
     else  if(this.params._id == "2"){
-        this.render('tabheader2', {to: 'tabheader'});
-        this.render('allclosedorders', {to: 'orderscontent'});
+        this.render('tabheader2', {to: 'tabheader',data:{tabindex:this.params._tabindex}});
+        this.render('allclosedorders', {to: 'orderscontent',data:{tabindex:this.params._tabindex}});
     }
     this.render('wddd', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex}});
-  
-
-    
-    
-    
+      
     var id = this.params._id; // "5"
     Session.set("curtab",id);
 });
 
+
+Router.route('/homedetail/ddxq/:_tabindex/:_id', function () {
+  //订单详情
+    this.layout('indexdetailpagelayout',{data: {title: '订单详情',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
+   
+    // if(this.params._id == "0"){       
+    //     this.render('tabheader0', {to: 'tabheader'});
+    //     this.render('allorders', {to: 'orderscontent'});
+    // }
+    // else if(this.params._id == "1"){
+    //     this.render('tabheader1', {to: 'tabheader'});
+    //     this.render('alltobedeliveryorders', {to: 'orderscontent'});
+    // }
+    // else  if(this.params._id == "2"){
+    //     this.render('tabheader2', {to: 'tabheader'});
+    //     this.render('allclosedorders', {to: 'orderscontent'});
+    // }
+   curorder = Order.findOne({_id:this.params._id});
+       
+   this.render('ddxq', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,order:curorder}});
+  
+    var id = this.params._id; // "5"
+    Session.set("curtab",id);
+});
+
+
 Router.route('/homedetail/cxhd/:_tabindex', function () {
     
-        this.layout('indexdetailpagelayout',{data: {title: '促销活动',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
+    this.layout('indexdetailpagelayout',{data: {title: '促销活动',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
     this.render('cxhd', {to: 'detailpagecontent'});
 });
 
 Router.route('/homedetail/yqcx/:_tabindex', function () {
      
-        this.layout('indexdetailpagelayout',{data: {title: '用气查询',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
+     this.layout('indexdetailpagelayout',{data: {title: '用气查询',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
     this.render('yqcx', {to: 'detailpagecontent'});
 });

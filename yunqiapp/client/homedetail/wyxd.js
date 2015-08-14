@@ -13,6 +13,7 @@
          if (paytypee!=null){
              paytype = $(paytypee).val();
          }
+         paytypestring = "货到付款";
                 //Router.go("/homedetail/wyxd");
          //Router.go("/homedetail/wyxd");
          
@@ -43,6 +44,7 @@
 				yunqimemo:yunqimemo,
 				wanttime:wanttime,
 				paytype:paytype,
+				paytypestring:paytypestring,
                 orderstatus:'neworder',
                 orderstatusstring:'待支付',
                 orderamount:amount,
