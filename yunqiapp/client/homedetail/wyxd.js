@@ -1,19 +1,4 @@
-    Template.wyxd.helpers({
-      'orderamount':getSessionOrderAmount(),
-         
-	});
-    
-    function getSessionOrderAmount(){
-          var productlistsession = Session.get("productlistsession");
-          if(productlistsession == null){
-            return 0;
-          }
-          var amount = 0;
-          for( j in productlistsession){
-               amount += (productlistsession[j].productprice * productlistsession[j].qty);
-          };
-          return amount;
-    }
+ 
     
      Template.wyxd.events({  
         'click #btnfinish': function(event, template) {
@@ -31,18 +16,23 @@
                 //Router.go("/homedetail/wyxd");
          //Router.go("/homedetail/wyxd");
          
-         console.log("deliveryaddress:" + deliveryaddress);
-        console.log("contactname:" + contactname);
-        console.log("contacttel:" + contacttel);
-        console.log("yunqimemo:" + yunqimemo);
-        console.log("wanttime:" + wanttime);
-       console.log("paytype:" + paytype);
-         console.log("click finished");
+        //  console.log("deliveryaddress:" + deliveryaddress);
+        // console.log("contactname:" + contactname);
+        // console.log("contacttel:" + contacttel);
+        // console.log("yunqimemo:" + yunqimemo);
+        // console.log("wanttime:" + wanttime);
+       // console.log("paytype:" + paytype);
+        //  console.log("click finished");
          
             var productlistsession = Session.get("productlistsession");
             if(productlistsession == null){
                 productlistsession = [];
             }
+            var amount = 0;
+            for( j in productlistsession){
+                amount += (productlistsession[j].productprice * productlistsession[j].qty);
+            };
+    
 
 			var currentUserId = Meteor.userId();
 			var orderData = {
@@ -55,7 +45,7 @@
 				paytype:paytype,
                 orderstatus:'neworder',
                 orderstatusstring:'待支付',
-                orderamount:getSessionOrderAmount(),
+                orderamount:amount,
                 createtime:new Date(),
                 orderproductlists:productlistsession
 			};

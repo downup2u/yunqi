@@ -10,7 +10,15 @@ Router.route('/profile', function () {
   this.layout('mainlayout');
   if (Meteor.user()) {
       console.log("login");
-     this.render('profile', {to: 'content'});
+     var currentUserId = Meteor.userId();
+     var countallorders = Order.find({createuser:currentUserId}).count();
+     var countneworders = Order.find({createuser:currentUserId,orderstatus:'neworder'}).count();
+     var countpayedorders = Order.find({createuser:currentUserId,orderstatus:'payedorder'}).count();
+     this.render('profile', {to: 'content',data:{
+         countallorders:countallorders,
+         countneworders:countneworders,
+         countpayedorders:countpayedorders,
+     }});
   }
   else{
       console.log("not login");
@@ -39,6 +47,9 @@ Router.route('/tabhome/:_tabindex', function () {
     if(this.params._tabindex == "1"){
         this.redirect("/profile");
     }
+    else if(this.params._tabindex == "2"){
+        this.redirect("/more");
+    }
     else{
         this.redirect("/");
     }
@@ -53,18 +64,31 @@ Router.route('/homedetail/producttype/:_tabindex', function () {
     this.render('producttype', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex}});
 });
 
+
+function getSessionOrderAmount(){
+    var productlistsession = Session.get("productlistsession");
+    if(productlistsession == null){
+            return 0;
+    }
+    var amount = 0;
+    for( j in productlistsession){
+        amount += (productlistsession[j].productprice * productlistsession[j].qty);
+    };
+    return amount;
+}
 Router.route('/homedetail/wyxd/:_tabindex', function () {
   
+    console.log("我要下单："+this.params._tabindex);
     this.layout('indexdetailpagelayout',{data: {title: '我要下单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
-    this.render('wyxd', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex}});
+    this.render('wyxd', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,orderamount:getSessionOrderAmount()}});
 });
 
 Router.route('/homedetail/wddd/:_tabindex/:_id', function () {
   
     this.layout('indexdetailpagelayout',{data: {title: '我的订单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
-    this.render('wddd', {to: 'detailpagecontent'});
+    this.render('wddd', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex}});
   
     var id = this.params._id; // "5"
     Session.set("curtab",id);
@@ -99,12 +123,12 @@ Router.route('/homedetail/yhq/:_tabindex', function () {
 });
 
 Router.route('/profile/dz', function () {
-    this.layout('indexdetailpagelayout',{data: {title: '地址',returnurl:'/',returnhome:'/'}});
+    this.layout('indexdetailpagelayout',{data: {title: '地址',returnurl:'/tabhome/2',returnhome:'/tabhome/2'}});
     this.render('dz', {to: 'detailpagecontent'});
 });
 
 Router.route('/bz', function () {
-    this.layout('indexdetailpagelayout',{data: {title: '使用帮助',returnurl:'/',returnhome:'/'}});
+    this.layout('indexdetailpagelayout',{data: {title: '使用帮助',returnurl:'/tabhome/2',returnhome:'/tabhome/2'}});
     this.render('bz', {to: 'detailpagecontent'});
 });
 

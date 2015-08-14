@@ -55,13 +55,13 @@ if(Meteor.isClient){
                 for( j in  productlistsession){
                     if (productlistsession[j]._id != pid){
                         productlistret.push(productlistsession[j]);
-                        console.log("curproduct qty:"+productlistsession[j].qty + "name:"+productlistsession[j].productname);
+                        //console.log("curproduct qty:"+productlistsession[j].qty + "name:"+productlistsession[j].productname);
                     }
                 };
                 var curproduct = Products.findOne({_id:pid});
                 if(qty > 0){
                     curproduct.qty = qty;
-                    console.log("curproduct qty:"+curproduct.qty + "name:"+curproduct.productname);
+                   // console.log("curproduct qty:"+curproduct.qty + "name:"+curproduct.productname);
                     productlistret.push(curproduct);
                 }
                 Session.set("productlistsession", productlistret);
@@ -93,9 +93,9 @@ if(Meteor.isClient){
           var productlistsession = Session.get("productlistsession");
           if(productlistsession == null){
              productlistdb.forEach(function(productdb){
-                 console.log("cur products name:" + productdb.productname);  
+               //  console.log("cur products name:" + productdb.productname);  
                  productdb.qty = 0;
-                 console.log("productdb qty:"+productdb.qty);
+               //  console.log("productdb qty:"+productdb.qty);
                  productlistret.push(productdb);
                  //productlistdb.update();
              });
@@ -107,19 +107,19 @@ if(Meteor.isClient){
                      if (productlistsession[j]._id == productdb._id){
                          productdb.qty = productlistsession[j].qty;
                     
-                         console.log("cur products name:" + productdb.productname); 
+                        // console.log("cur products name:" + productdb.productname); 
                      }
                  };
-                  console.log("productdb qty:"+productdb.qty);
+                 // console.log("productdb qty:"+productdb.qty);
                  productlistret.push(productdb);
              });
           }
           
         //for test  
-        for (i in productlistret) {
-            console.log("cur products name qty:"+productlistret[i].qty);
-            console.log("cur products name:" + productlistret[i].productname); 
-        };
+        // for (i in productlistret) {
+        //     console.log("cur products name qty:"+productlistret[i].qty);
+        //     console.log("cur products name:" + productlistret[i].productname); 
+        // };
         
         //保持session
         productlistsession = [];

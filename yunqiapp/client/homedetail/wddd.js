@@ -27,8 +27,8 @@
   Template.allclosedorders.helpers({
       'allorders':function(){
          var currentUserId = Meteor.userId();
-         var orders = Order.find({createuser:currentUserId,orderstatus:'closed'});
-         console.log("allclosedorders:"+orders.count());
+         var orders = Order.find({createuser:currentUserId,orderstatus:'payedorder'});
+         console.log("allpayedorders:"+orders.count());
          return orders;
       },
  });
