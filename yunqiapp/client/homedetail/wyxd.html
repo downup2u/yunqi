@@ -13,12 +13,12 @@
                   <tbody>
             <tr>
                     
-                      <td><input type="text" placeholder="还没有选择-点击选择" id="truename" class="px" name="truename"></td>
+                      <td><input type="text" placeholder="还没有选择-点击选择"></td>
                     </tr>
           </tbody>
                 </table></a>
       </li>
-      <li> <a  href="#"><span><em class="ok">订单金额:<strong>￥100</strong></em></span></a> </li>
+      <li> <a  href="#"><span><em class="ok">订单金额:<strong>{{orderamount}}</strong></em></span></a> </li>
               
               
       
@@ -45,7 +45,7 @@
                   <tbody>
             <tr>
                       <th>送气地址</th>
-                      <td><input type="text" placeholder="送气地址" id="truename" class="px" name="truename"></td>
+                      <td><input type="text" placeholder="送气地址" id="deliveryaddress" class="px" ></td>
                     </tr>
           </tbody>
                 </table>
@@ -55,7 +55,7 @@
                   <tbody>
             <tr>
                       <th>联系人</th>
-                      <td><input type="tel" placeholder="请输入联系人" id="tel" class="px" name="tel"></td>
+                      <td><input type="tel" placeholder="请输入联系人" id="contactname" class="px"></td>
                     </tr>
           </tbody>
                 </table>
@@ -65,7 +65,7 @@
                   <tbody>
             <tr>
                       <th>联系电话</th>
-                      <td><input type="tel" placeholder="联系电话" id="tel" class="px" name="tel"></td>
+                      <td><input type="tel" placeholder="联系电话" id="contacttel" class="px"></td>
                     </tr>
           </tbody>
                 </table>
@@ -102,7 +102,7 @@
                   <tbody>
             <tr>
                       <th>备注</th>
-                      <td><input type="tel" placeholder="请输入联系电话" id="tel" class="px" name="tel"></td>
+                      <td><input type="text" placeholder="请输入备注" id="yunqimemo" class="px" name="tel"></td>
                     </tr>
           </tbody>
                 </table>
@@ -144,7 +144,7 @@
             </form>
   </ul>
           <div class="footReturn">
-    <input type="button" onclick="location.href='ddcg.htm'" value="提交订单" class="submit" id="showcard">
+    <input type="button" value="提交订单" class="submit" id="btnfinish">
     <div id="windowcenter" class="window">
               <div class="wtitle" id="title">操作提示<span id="alertclose" class="close"></span></div>
               <div class="content">

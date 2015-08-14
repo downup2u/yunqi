@@ -8,7 +8,7 @@ if(Meteor.isClient){
        // var username = template.find('#login-username').value,
        //     password = template.find('#login-password').value;
            
-        
+        Router.go("/homedetail/wyxd");
     }
     
     });
