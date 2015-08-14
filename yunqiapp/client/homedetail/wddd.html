@@ -1,11 +1,8 @@
 <template name="wddd">
- <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active">
-        <a href="/homedetail/wddd/{{tabindex}}/0" role="tab" data-toggle="tab">全部</a></li> 
-        <li role="presentation"><a href="/homedetail/wddd/{{tabindex}}/1" role="tab" data-toggle="tab">待送货</a></li>
-        <li role="presentation"><a href="/homedetail/wddd/{{tabindex}}/2" role="tab" data-toggle="tab">待评价</a></li>
-          
-        </ul>
+           <tabheader>
+          {{> yield "tabheader"}}
+        </tabheader>
+
 <div style="" id="wrapper">
   <div style="overflow: initial; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);" class="viewport" id="scroller">
     <section class="content">
@@ -13,18 +10,10 @@
         <div class="cart_list">
 
 
-           {{#if curtab is "0"}}
-             {{> allorders}}
-             {{else}}
-                {{#if curtab is "1"}}
-                 {{> alltobedeliveryorders}}
-                 {{else}}
-                 {{#if curtab is "2"}}
-                 {{> allclosedorders}}
-              {{/if}}
-           {{/if}}            
-           {{/if}}
-         
+         <orderscontent>
+          {{> yield "orderscontent"}}
+        </orderscontent>
+
          
         </div>
       </div>
@@ -34,7 +23,33 @@
   
 </div>
 </template>
-
+<template name="tabheader0">
+   <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+        <a href="/homedetail/wddd/{{tabindex}}/0" role="tab" data-toggle="tab">全部</a></li> 
+        <li role="presentation"><a href="/homedetail/wddd/{{tabindex}}/1" role="tab" data-toggle="tab">待送货</a></li>
+        <li role="presentation"><a href="/homedetail/wddd/{{tabindex}}/2" role="tab" data-toggle="tab">待评价</a></li>
+          
+        </ul>
+</template>
+<template name="tabheader1">
+   <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation">
+        <a href="/homedetail/wddd/{{tabindex}}/0" role="tab" data-toggle="tab">全部</a></li> 
+        <li role="presentation"  class="active"><a href="/homedetail/wddd/{{tabindex}}/1" role="tab" data-toggle="tab">待送货</a></li>
+        <li role="presentation"><a href="/homedetail/wddd/{{tabindex}}/2" role="tab" data-toggle="tab">待评价</a></li>
+          
+        </ul>
+</template>
+<template name="tabheader2">
+   <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation">
+        <a href="/homedetail/wddd/{{tabindex}}/0" role="tab" data-toggle="tab">全部</a></li> 
+        <li role="presentation"><a href="/homedetail/wddd/{{tabindex}}/1" role="tab" data-toggle="tab">待送货</a></li>
+        <li role="presentation"  class="active"><a href="/homedetail/wddd/{{tabindex}}/2" role="tab" data-toggle="tab">待评价</a></li>
+          
+        </ul>
+</template>
 <template name="allorders">
    {{#each allorders}}
             <div class="shop_title" shop_id="6078">

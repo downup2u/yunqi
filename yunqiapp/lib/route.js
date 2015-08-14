@@ -1,6 +1,7 @@
 
 Router.route('/', function () {
   this.layout('mainlayout');
+  this.render('navbar0', {to: 'navbar'});
   this.render('home', {to: 'content'});
 
 });
@@ -8,6 +9,7 @@ Router.route('/', function () {
 
 Router.route('/profile', function () {
   this.layout('mainlayout');
+  this.render('navbar1', {to: 'navbar'});
   if (Meteor.user()) {
       console.log("login");
      var currentUserId = Meteor.userId();
@@ -40,6 +42,7 @@ Router.route('/createuser', function () {
 
 Router.route('/more', function () {
     this.layout('mainlayout');
+    this.render('navbar2', {to: 'navbar'});
     this.render('more', {to: 'content'});
 });
 
@@ -82,14 +85,32 @@ Router.route('/homedetail/wyxd/:_tabindex', function () {
     this.layout('indexdetailpagelayout',{data: {title: '我要下单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
     this.render('wyxd', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,orderamount:getSessionOrderAmount()}});
-});
+    
+
+$});
 
 Router.route('/homedetail/wddd/:_tabindex/:_id', function () {
   
     this.layout('indexdetailpagelayout',{data: {title: '我的订单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
+    if(this.params._id == "0"){       
+        this.render('tabheader0', {to: 'tabheader'});
+        this.render('allorders', {to: 'orderscontent'});
+    }
+    else if(this.params._id == "1"){
+        this.render('tabheader1', {to: 'tabheader'});
+        this.render('alltobedeliveryorders', {to: 'orderscontent'});
+    }
+    else  if(this.params._id == "2"){
+        this.render('tabheader2', {to: 'tabheader'});
+        this.render('allclosedorders', {to: 'orderscontent'});
+    }
     this.render('wddd', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex}});
   
+
+    
+    
+    
     var id = this.params._id; // "5"
     Session.set("curtab",id);
 });
