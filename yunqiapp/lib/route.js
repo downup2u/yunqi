@@ -46,9 +46,12 @@ Router.route('/homedetail/wyxd', function () {
     this.render('wyxd', {to: 'detailpagecontent'});
 });
 
-Router.route('/homedetail/wddd', function () {
+Router.route('/homedetail/wddd/:_id', function () {
     this.layout('indexdetailpagelayout',{data: {title: '我的订单'}});
     this.render('wddd', {to: 'detailpagecontent'});
+    var params = this.params; // { _id: "5" }
+    var id = params._id; // "5"
+    Session.set("curtab",id);
 });
 
 Router.route('/homedetail/cxhd', function () {

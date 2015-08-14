@@ -1,7 +1,9 @@
 <template name="wddd">
  <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#undone" role="tab" data-toggle="tab" onclick="switchOrder(1);">全部</a></li>  <li role="presentation"><a href="#undone" role="tab" data-toggle="tab" onclick="switchOrder(1);">待送货</a></li>
-          <li role="presentation"><a href="#done" role="tab" data-toggle="tab" onclick="switchOrder(2);">待评价</a></li>
+        <li role="presentation" class="active">
+        <a href="/homedetail/wddd/0" role="tab" data-toggle="tab">全部</a></li> 
+        <li role="presentation"><a href="/homedetail/wddd/1" role="tab" data-toggle="tab">待送货</a></li>
+        <li role="presentation"><a href="/homedetail/wddd/2" role="tab" data-toggle="tab">待评价</a></li>
           
         </ul>
 <div style="" id="wrapper">
@@ -9,25 +11,16 @@
     <section class="content">
       <div class="block">
         <div class="cart_list">
-          <div class="shop_title" shop_id="6078">
-            
-            <div class="fl"><a class="shopLink eclipse" href="#">订单编号：012219656565</a></div>
-            <a class="fl right_arrow" href="#"></a> <a class="c_edit on" id="e__6078"></a> </div>
-          <div class="cart_item" id="1365243738" item_id="2042510373" stock="7" style="padding-left:1em">
-            <div class="detail">
-              <p>订单金额：<em style="color:#f00">￥155</em></p> 
-               <p>订单状态：<em style="color:#1b6ded">送货</em></p> 
-                  <p>下单时间：2015-07-08 14:20:00</p> 
-           
-          <div class="m-orderfun" data-order="150421293466">
-                                                        <button type="button" onclick="window.location='ddxq.htm'" class="btnq btn-default btn-sm btn-order-cancal" data-order="150421293466">订单详情</button>
-                                                                                    <button type="button" class="btnq btn-warning btn-sm btn-order-pay" data-order="150421293466">立即支付</button>
-                                                                                </div>
-              
-          </div>
-            
-            
-          </div>
+           {{#if curtab is "0"}}
+             {{> allorders}}
+           {{/if}}
+           {{#if curtab is "1"}}
+             {{> alltobedeliveryorders}}
+           {{/if}}
+           {{#if curtab is "2"}}
+             {{> allclosedorders}}
+           {{/if}}            
+         
         </div>
       </div>
        
@@ -36,3 +29,73 @@
   
 </div>
 </template>
+
+<template name="allorders">
+   {{#each allorders}}
+            <div class="shop_title" shop_id="6078">
+            <div class="fl"><a class="shopLink eclipse" href="#">订单编号：{{_id}}</a></div>
+            <a class="fl right_arrow" href="#"></a> <a class="c_edit on" id="e__6078"></a> 
+            </div>
+            
+          <div class="cart_item" id="1365243738" item_id="2042510373" stock="7" style="padding-left:1em">
+            <div class="detail">
+              <p>订单金额：<em style="color:#f00">￥{{orderamount}}</em></p> 
+               <p>订单状态：<em style="color:#1b6ded">{{orderstatusstring}}</em></p> 
+                  <p>下单时间：{{createtime}}</p> 
+           
+          <div class="m-orderfun" data-order="150421293466">
+                                                        <button type="button" onclick="window.location='ddxq.htm'" class="btnq btn-default btn-sm btn-order-cancal" data-order="150421293466">订单详情</button>
+      <button type="button" class="btnq btn-warning btn-sm btn-order-pay" data-order="150421293466">立即支付</button>
+                                                                                </div>
+              
+          </div>
+           </div>
+            {{/each}}
+  </template>
+  
+  <template name="alltobedeliveryorders">
+   {{#each allorders}}
+            <div class="shop_title" shop_id="6078">
+            <div class="fl"><a class="shopLink eclipse" href="#">订单编号：{{_id}}</a></div>
+            <a class="fl right_arrow" href="#"></a> <a class="c_edit on" id="e__6078"></a> 
+            </div>
+            
+          <div class="cart_item" id="1365243738" item_id="2042510373" stock="7" style="padding-left:1em">
+            <div class="detail">
+              <p>订单金额：<em style="color:#f00">￥{{orderamount}}</em></p> 
+               <p>订单状态：<em style="color:#1b6ded">{{orderstatusstring}}</em></p> 
+                  <p>下单时间：{{createtime}}</p> 
+           
+          <div class="m-orderfun" data-order="150421293466">
+                                                        <button type="button" onclick="window.location='ddxq.htm'" class="btnq btn-default btn-sm btn-order-cancal" data-order="150421293466">订单详情</button>
+      <button type="button" class="btnq btn-warning btn-sm btn-order-pay" data-order="150421293466">立即支付</button>
+                                                                                </div>
+              
+          </div>
+           </div>
+            {{/each}}
+  </template>
+  
+  <template name="allclosedorders">
+       {{#each allorders}}
+            <div class="shop_title" shop_id="6078">
+            <div class="fl"><a class="shopLink eclipse" href="#">订单编号：{{_id}}</a></div>
+            <a class="fl right_arrow" href="#"></a> <a class="c_edit on" id="e__6078"></a> 
+            </div>
+            
+          <div class="cart_item" id="1365243738" item_id="2042510373" stock="7" style="padding-left:1em">
+            <div class="detail">
+              <p>订单金额：<em style="color:#f00">￥{{orderamount}}</em></p> 
+               <p>订单状态：<em style="color:#1b6ded">{{orderstatusstring}}</em></p> 
+                  <p>下单时间：{{createtime}}</p> 
+           
+          <div class="m-orderfun" data-order="150421293466">
+                                                        <button type="button" onclick="window.location='ddxq.htm'" class="btnq btn-default btn-sm btn-order-cancal" data-order="150421293466">订单详情</button>
+      <button type="button" class="btnq btn-warning btn-sm btn-order-pay" data-order="150421293466">立即支付</button>
+                                                                                </div>
+              
+          </div>
+           </div>
+            {{/each}}
+     </template>
+    

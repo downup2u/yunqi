@@ -7,7 +7,8 @@ if(Meteor.isClient){
         // 1. Collect the username and password from the form
        // var username = template.find('#login-username').value,
        //     password = template.find('#login-password').value;
-           
+       //删除为0的选项    
+
         Router.go("/homedetail/wyxd");
     }
     
@@ -116,8 +117,16 @@ if(Meteor.isClient){
             console.log("cur products name:" + productlistret[i].productname); 
         };
         
-        
-        Session.set("productlistsession",productlistret);
+        //保持session
+        productlistsession = [];
+        for( j in  productlistret){
+            if (productlistret[j].qty > 0){
+                productlistsession.push(productlistret[j]);
+                
+            }
+        };
+        Session.set("productlistsession",productlistsession);
+  
         return productlistret;
      }
 });
