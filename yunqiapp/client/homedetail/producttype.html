@@ -7,126 +7,17 @@
     <section id="m-cart" class="m-component-cart">
     <div class="m-cartlist">
         <ul class="list-unstyled">
-                        <li type="normal" ppid="5894" pid="3978" id="c_normal_5894">
-                <a href="#">
-                    
-                    <div class="m-cartlist-info">
-                        <h3>液化气（小）</h3>
-                        
-
-                        <h5>￥45.00&nbsp;</h5>                           
-                    </div>
-                </a>
-                                 
-                 <div class="m-cart-numswrap">
-                    <div class="num_sel_lage pull-right clearfix">
-                        <span class="inC">-</span>
-                        <input type="text" value="1" autocomplete="on" name="qty" disabled="disabled">
-                        <span class="deC">+</span>
-                    </div>
-                </div>
-                            </li>
-                       <li type="normal" ppid="5894" pid="3978" id="c_normal_5894">
-                <a href="#">
-                    
-                    <div class="m-cartlist-info">
-                        <h3>液化气（中）</h3>
-                        
-
-                        <h5>￥130.00&nbsp;</h5>                           
-                    </div>
-                </a>
-                                 
-                 <div class="m-cart-numswrap">
-                    <div class="num_sel_lage pull-right clearfix">
-                        <span class="inC">-</span>
-                        <input type="text" value="1" autocomplete="on" name="qty" disabled="disabled">
-                        <span class="deC">+</span>
-                    </div>
-                </div>
-                            </li>   
-                            <li type="normal" ppid="5894" pid="3978" id="c_normal_5894">
-                <a href="#">
-                    
-                    <div class="m-cartlist-info">
-                        <h3>液化气（大）</h3>
-                        
-
-                        <h5>￥440.00&nbsp;</h5>                           
-                    </div>
-                </a>
-                                 
-                 <div class="m-cart-numswrap">
-                    <div class="num_sel_lage pull-right clearfix">
-                        <span class="inC">-</span>
-                        <input type="text" value="1" autocomplete="on" name="qty" disabled="disabled">
-                        <span class="deC">+</span>
-                    </div>
-                </div>
-                            </li><li type="normal" ppid="5894" pid="3978" id="c_normal_5894">
-                <a href="#">
-                    
-                    <div class="m-cartlist-info">
-                        <h3>二甲醚（小）</h3>
-                        
-
-                        <h5>￥39.00&nbsp;</h5>                           
-                    </div>
-                </a>
-                                 
-                 <div class="m-cart-numswrap">
-                    <div class="num_sel_lage pull-right clearfix">
-                        <span class="inC">-</span>
-                        <input type="text" value="1" autocomplete="on" name="qty" disabled="disabled">
-                        <span class="deC">+</span>
-                    </div>
-                </div>
-                            </li>
-                            <li type="normal" ppid="5894" pid="3978" id="c_normal_5894">
-                <a href="#">
-                    
-                    <div class="m-cartlist-info">
-                        <h3>二甲醚（中）</h3>
-                        
-
-                        <h5>￥130.00&nbsp;</h5>                           
-                    </div>
-                </a>
-                                 
-                 <div class="m-cart-numswrap">
-                    <div class="num_sel_lage pull-right clearfix">
-                        <span class="inC">-</span>
-                        <input type="text" value="1" autocomplete="on" name="qty" disabled="disabled">
-                        <span class="deC">+</span>
-                    </div>
-                </div>
-                            </li><li type="normal" ppid="5894" pid="3978" id="c_normal_5894">
-                <a href="#">
-                    
-                    <div class="m-cartlist-info">
-                        <h3>二甲醚（中）</h3>
-                        
-
-                        <h5>￥130.00&nbsp;</h5>                           
-                    </div>
-                </a>
-                                 
-                 <div class="m-cart-numswrap">
-                    <div class="num_sel_lage pull-right clearfix">
-                        <span class="inC">-</span>
-                        <input type="text" value="1" autocomplete="on" name="qty" disabled="disabled">
-                        <span class="deC">+</span>
-                    </div>
-                </div>
-                            </li>             
-        </ul>    
+            {{#each products}}
+                      {{>product}}
+                {{/each}}            
+                             
+        </ul>  
+        <li> <a  href="#"><span><em class="ok">订单金额:<strong>￥{{sessionorderamount}}</strong></em></span></a> </li>  
     </div>
         
-    </section>    <ul class="round">
+    </section>   
     
-  </ul>  <!--后台可控制是否显示-->
-          
-          
+  
           <!--后台可控制是否显示-->
           
     
@@ -147,3 +38,24 @@
 </section>
 
 	</template>
+    
+    <template name="product">
+          <li type="normal">
+                <a href="#">
+                    
+                    <div class="m-cartlist-info">
+                        <h3>{{productname}}</h3>                     
+                        <h5>￥{{productprice}}</h5>                                                            
+                    </div>
+                </a>
+                                 
+                 <div class="m-cart-numswrap">
+                    <div class="num_sel_lage pull-right clearfix">
+                        <span class="deC">-</span>
+                        <input type="hidden" value="{{_id}}" autocomplete="on" class="pid" disabled="disabled">
+                        <input type="text" value="{{qty}}" autocomplete="on" class="qty" disabled="disabled">
+                        <span class="inC">+</span>
+                    </div>
+                </div>
+          </li>
+    </template>
