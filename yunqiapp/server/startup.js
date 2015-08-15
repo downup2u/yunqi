@@ -1,6 +1,8 @@
 
 
 Meteor.startup(function(){
+    
+
      var productlistdb = 
           [ 
           {

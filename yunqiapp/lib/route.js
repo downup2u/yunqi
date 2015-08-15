@@ -24,7 +24,7 @@ Router.route('/profile', function () {
   }
   else{
       console.log("not login");
-      this.render('login', {to: 'content'});
+      this.render('signIn', {to: 'content'});
    }
 
 });
@@ -35,9 +35,9 @@ Router.route('/wjmm', function () {
 });
 
 
-Router.route('/createuser', function () {
+Router.route('/register', function () {
     this.layout('indexdetailpagelayout',{data: {title: '注册',returnurl:'/',returnhome:'/'}});
-    this.render('CreateUser', {to: 'detailpagecontent'});
+    this.render('register', {to: 'detailpagecontent'});
 });
 
 Router.route('/more', function () {

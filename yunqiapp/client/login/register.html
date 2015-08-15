@@ -1,0 +1,17 @@
+<template name="register">
+
+{{#autoForm id="SignUpForm" schema="Schemas.SignUpForm" type="method" meteormethod="register/signUp"}}
+  <div class="field-group">
+    {{> afQuickField name='username'}}
+    {{> afQuickField name='phone'}}
+    {{> afQuickField name='password' type='password'}}
+    {{> afQuickField name='passwordConfirmation' type='password'}}
+  </div>
+  {{#if isLoading}}
+    <span class="text-info">正在注册用户...</span>
+  {{else}}
+  <button type="submit" class="btn btn-primary btn-block ">注册</button>
+  {{/if}}
+{{/autoForm}} 
+   
+</template>

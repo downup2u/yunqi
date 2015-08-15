@@ -5,7 +5,7 @@ if(Meteor.isClient){
         Meteor.logout();
     }
   });
-  
+  /** 
 Template.login.events({  
     'click #btnlogin': function(event, template) {
         // 1. Collect the username and password from the form
@@ -34,7 +34,7 @@ Template.login.events({
         return false;
     }
 });
-
+*/
 Template.CreateUser.events({  
   'click #btnregister': function(event, template) {
     var user;
