@@ -10,7 +10,4 @@ insecure
 iron:router
 accounts-password
 aldeed:autoform
-meteoric:autoform-ionic
 reactive-dict
-meteoric:ionic-sass
-meteoric:ionicons-sass

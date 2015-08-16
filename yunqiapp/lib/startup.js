@@ -2,7 +2,15 @@
 
 Meteor.startup(function(){
     
-
+    if(Meteor.isClient){
+        console.log("client start...0")
+     //AutoForm.setDefaultTemplate("semanticUI");
+       // AutoForm.setDefaultTemplate('nothing');
+    //AutoForm.setDefaultTemplate('bootstrap3');
+     //AutoForm.setDefaultTemplate("semanticUI");
+    }
+    
+    if(Meteor.isServer){
      var productlistdb = 
           [ 
           {
@@ -48,12 +56,5 @@ Meteor.startup(function(){
         }
 
     }
-    // var productlistdb2 = Products.find();
-    // productlistdb2.forEach(function(product){
-               
-    //              console.log( "cur products name:" +product.productname);  
-    //              product.qty = 0;
-             
-    // });
-
+ }
 });

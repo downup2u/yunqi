@@ -1,17 +1,32 @@
 <template name="register">
 
 {{#autoForm id="SignUpForm" schema="Schemas.SignUpForm" type="method" meteormethod="register/signUp"}}
-  <div class="field-group">
-    {{> afQuickField name='username'}}
-    {{> afQuickField name='phone'}}
-    {{> afQuickField name='password' type='password'}}
-    {{> afQuickField name='passwordConfirmation' type='password'}}
-  </div>
+   <div class="log_box">
+       <li class="username">
+      <span> <i class="icon-user"></i> </span>
+    {{> afQuickField name='username' label=false}}
+    </li>
+     <li class="username">
+      <span> <i class="icon-phone"></i> </span>
+    {{> afQuickField name='phone' label=false}}
+     </li>
+     <li class="username">
+      <span> <i class="icon-key"></i> </span>
+    {{> afQuickField name='password' type='password' label=false}}
+     </li>
+     <li class="username">
+      <span> <i class="icon-key"></i> </span>
+    {{> afQuickField name='passwordConfirmation' type='password' label=false}}
+    </li>
+  
   {{#if isLoading}}
     <span class="text-info">正在注册用户...</span>
   {{else}}
-  <button type="submit" class="btn btn-primary btn-block ">注册</button>
+   <li class="btn_submit">
+  <button type="submit">注册</button>
+  </li>
   {{/if}}
+  </div>
 {{/autoForm}} 
    
 </template>

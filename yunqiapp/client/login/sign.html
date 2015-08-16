@@ -1,17 +1,36 @@
-﻿<template name="signIn">
+﻿
+
+<template name="signIn">
   {{#autoForm id="SignInForm" schema="Schemas.SignInForm"}}
     <div class="field-group">
+   <div class="btn_ch_r"> </div>
+  </div>
+  <div class="log_box">
+    <ul>
+         <li class="username">
+      <span> <i class="icon-user"></i> </span>
+      {{> afQuickField name='username' label=false}}
+      </li>
+      <li class="username">
+        <span> <i class="icon-key"></i> </span>
+        {{> afQuickField name='password' type='password' label=false}}
+      </li>
+    
    
-    {{> afQuickField name='username'}}
-   
-      {{> afQuickField name='password' type='password'}}
-    </div>
+      
+    
     {{#if isLoading}}
       <span class="text-info">正在登录中,请稍后...</span>
     {{else}}
-      <button type="submit"  class="btn btn-primary btn-lg action-login" >登录</button>
+    <li class="btn_submit">
+      <button type="submit">登录</button>
+      </li>
     {{/if}}
+    </ul>
+      </div>
   {{/autoForm}}
+  
+
   <li class="reg_findpwd">
         <a href="/register">免费注册</a>
       <a href="/wjmm">忘记密码</a>
