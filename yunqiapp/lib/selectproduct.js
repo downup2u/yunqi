@@ -10,7 +10,7 @@ if(Meteor.isClient){
        //删除为0的选项  
        var tabindex = template.find('.tabindex').value;  
         
-        Router.go("/homedetail/wyxd/" + tabindex);
+        Router.go("/homedetail/neworder/" + tabindex);
     }
     
     });

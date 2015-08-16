@@ -89,6 +89,30 @@ Router.route('/homedetail/wyxd/:_tabindex', function () {
 
 $});
 
+Router.route('/homedetail/neworder/:_tabindex', function () {
+  
+    
+    this.layout('indexdetailpagelayout',{data: {title: '我要下单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
+
+    var productlistsession = Session.get("productlistsession");
+    if(productlistsession == null){
+        productlistsession = [];
+    }
+    var amount = 0;
+    for( j in productlistsession){
+        amount += (productlistsession[j].productprice * productlistsession[j].qty);
+    };
+    var curorder = {
+        orderamount:amount,
+        orderproductlists:productlistsession
+    };
+     console.log("我要下单neworder：orderamount:"+amount);
+    //this.render('orderproduct', {data:{tabindex:this.params._tabindex,order:curorder}});
+    this.render('neworder', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,order:curorder}});
+    
+
+$});
+
 Router.route('/homedetail/wddd/:_tabindex/:_id', function () {
   
     this.layout('indexdetailpagelayout',{data: {title: '我的订单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
@@ -129,7 +153,9 @@ Router.route('/homedetail/ddxq/:_tabindex/:_id', function () {
     //     this.render('allclosedorders', {to: 'orderscontent'});
     // }
    curorder = Order.findOne({_id:this.params._id});
-       
+ 
+   this.render('orderproduct', {data:{tabindex:this.params._tabindex,order:curorder}});
+     
    this.render('ddxq', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,order:curorder}});
   
     var id = this.params._id; // "5"
