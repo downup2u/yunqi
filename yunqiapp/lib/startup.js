@@ -4,7 +4,8 @@ Meteor.startup(function(){
     
     if(Meteor.isClient){
         console.log("client start...0")
-     //AutoForm.setDefaultTemplate("semanticUI");
+     AutoForm.setDefaultTemplate("plain");
+     AutoForm.setDefaultTemplateForType('afFieldInput', 'plain');
        // AutoForm.setDefaultTemplate('nothing');
     //AutoForm.setDefaultTemplate('bootstrap3');
      //AutoForm.setDefaultTemplate("semanticUI");

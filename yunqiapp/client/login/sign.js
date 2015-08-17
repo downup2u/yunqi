@@ -5,7 +5,7 @@ dict.setDefault('isLoading', false)
 Schemas.SignInForm = new SimpleSchema({
   username: {
     type: String,
-  label: '用户名'
+      label: '用户名'
   },
   password: {
     type: String,

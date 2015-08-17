@@ -9,16 +9,14 @@
     <ul>
          <li class="username">
       <span> <i class="icon-user"></i> </span>
-      {{> afQuickField name='username' label=false}}
-      </li>
+      {{> afQuickField name='username' label=false  template='plain' placeholder='用户名'}}
+        </li>
       <li class="username">
         <span> <i class="icon-key"></i> </span>
-        {{> afQuickField name='password' type='password' label=false}}
+        {{> afQuickField name='password' type='password' label=false  template="_plain"}}
       </li>
-    
-   
       
-    
+   
     {{#if isLoading}}
       <span class="text-info">正在登录中,请稍后...</span>
     {{else}}
