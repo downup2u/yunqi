@@ -1,7 +1,7 @@
 ﻿
 
 <template name="signIn">
-  {{#autoForm id="SignInForm" schema="Schemas.SignInForm"}}
+  {{#autoForm id="SignInForm" schema="Schemas.SignInForm" template="_plain"}}
     <div class="field-group">
    <div class="btn_ch_r"> </div>
   </div>
@@ -9,14 +9,17 @@
     <ul>
          <li class="username">
       <span> <i class="icon-user"></i> </span>
-      {{> afQuickField name='username' label=false  template='plain' placeholder='用户名'}}
-        </li>
+      {{> afQuickField name='username' label=false  template="plain"}}
+      </li>
       <li class="username">
         <span> <i class="icon-key"></i> </span>
         {{> afQuickField name='password' type='password' label=false  template="_plain"}}
       </li>
-      
+ 
    
+   
+      
+    
     {{#if isLoading}}
       <span class="text-info">正在登录中,请稍后...</span>
     {{else}}

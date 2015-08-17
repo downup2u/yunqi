@@ -1209,6 +1209,9 @@ body{background-color: #f8f8f8;}
 	background: url(../images/sprites-hd.png) no-repeat;
 	background-size:21px;
 }
+input:-webkit-autofill { 
+-webkit-box-shadow: 0 0 0px 1000px #fff inset; 
+}
 .footer-bar li a .ui-icon-home{
 	background-position: 0 -84px ;
 }
@@ -1220,6 +1223,8 @@ body{background-color: #f8f8f8;}
 }
 .footer-bar li a .ui-qqt{
 	background-position:0 -285px ;
+}.footer-bar li a .ui-qqt-hover{
+	background-position:0 -262px ;
 }
 .footer-bar li a .ui-icon-center{
 	background-position: 0 -16px;
@@ -1246,7 +1251,7 @@ body{background-color: #f8f8f8;}
 	background-position: 0 -152px ;
 }
 .footer-bar li a .ui-center-hover{
-	background-position: 0 -176px ;
+	background-position: 0 -128px ;
 }
 .footer-bar li a .ui-icon-server-hover{
 	background-position: 0 -350px;
