@@ -15,7 +15,7 @@
       </li>
    {{> orderproduct}}
    </fieldset>
-  {{#autoForm schema=neworderFormSchema id="neworderForm"}}
+  {{#autoForm schema=neworderFormSchema id="neworderForm"  template="plain"}}
  
   <fieldset>
     <legend>送气地址</legend>
@@ -28,9 +28,9 @@
     {{> afQuickField name="wanttime" }}
     {{> afQuickField name="yunqimemo" }}
      </fieldset>
-    <fieldset>
-      {{> afQuickField name="paytype" }}
-     </fieldset>
+ 
+      {{> afQuickField name="paytype" label=false noselect=true   template="plain"}}
+
     <div>
       <button type="submit" class="btn btn-primary">递交订单</button>
     </div>
