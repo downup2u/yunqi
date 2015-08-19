@@ -155,7 +155,7 @@ Explanation: The station generic CSS style
 .sub_menu { width:100%; padding:5px 0; border-radius:5px; box-shadow:0px 1px 5px #999; position:absolute; background:#fff; bottom:65px; font-size:1.4rem; }
 .sub_menu li { width:100%; padding:0; height:auto; line-height:38px; border:none; border-bottom:1px solid #ddd; margin:0; }
 .sub_menu li:last-of-type { border-bottom: none; position: relative; }
-.sub_bg { position: absolute; left: 50%; margin-left: -8px; bottom: -15px; width: 16px; height: 11px; background: url(images/sub_bg.png) no-repeat; }
+.sub_bg { position: absolute; left: 50%; margin-left: -8px; bottom: -15px; width: 16px; height: 11px; background: url(/images/sub_bg.png) no-repeat; }
 .foot_nav li:nth-of-type(1) .sub_menu { left:10px; margin-left:0; }
 .foot_nav li:nth-of-type(1) .sub_menu .sub_bg { left:10px; margin-left:0; }
 .foot_nav li:nth-of-type(4) .sub_menu { right:10px; margin-left:0; left:auto; }
@@ -286,9 +286,9 @@ Explanation: The station generic CSS style
 .scroll_top i { font-size:2.2rem; color:#f7f7f7; }
 .scroll_top span { display:none; }
 /*=========================*/
-.searchbox input[type=reset] { display: none; background :url(images/close.png) no-repeat center; background-size: 16px; position: absolute; right: 40px; top: 50%; height: 30px; width: 16%; padding: 0; margin-top:0; border: 0; font-size: 1.4rem; line-height: 19px; color: transparent; cursor: pointer; z-index: 1; }
+.searchbox input[type=reset] { display: none; background :url(/images/close.png) no-repeat center; background-size: 16px; position: absolute; right: 40px; top: 50%; height: 30px; width: 16%; padding: 0; margin-top:0; border: 0; font-size: 1.4rem; line-height: 19px; color: transparent; cursor: pointer; z-index: 1; }
 .searchbox input[type=text] { background:#fff; width: 78%; padding:0 1%;  color: #000; vertical-align: middle; z-index: 1; border:0; margin:0;height:100%; float:left; }
-.searchbox input[type=submit] { background:#fff url(images/search_btn.png) no-repeat center center; background-size: 2.8rem; text-align:center; width: 20%; height: 100%; padding: 0px; margin:0; border: 0; color: transparent; cursor: pointer; vertical-align:middle; float:right; }
+.searchbox input[type=submit] { background:#fff url(/images/search_btn.png) no-repeat center center; background-size: 2.8rem; text-align:center; width: 20%; height: 100%; padding: 0px; margin:0; border: 0; color: transparent; cursor: pointer; vertical-align:middle; float:right; }
 /*============================*/
 .list_fun { background:#E76540; height:5rem; line-height:5rem; text-align:center; position:relative; z-index:25; }
 .menuwrapper { float:left; width:16%; height:4.6rem; position:relative; background:none; }

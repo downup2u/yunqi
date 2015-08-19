@@ -333,7 +333,7 @@ label {
     max-width: 100%;
 }
 .tj{ width:96%; margin:0 2%; margin-bottom:15px; margin-top:10px; text-align:center}
-.bwe{ background:url(images/order_bg1.png) repeat-x top; font-size:18px;  background-size:1.2em 0.3em ; padding-bottom:5px;}
+.bwe{ background:url(/images/order_bg1.png) repeat-x top; font-size:18px;  background-size:1.2em 0.3em ; padding-bottom:5px;}
 
 .round li.nob .dropdown-select{
     border-radius:5px;

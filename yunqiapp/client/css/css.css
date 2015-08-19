@@ -316,7 +316,7 @@ a:hover {
 	padding: 16px 0;
 	text-align: center;
 }
-.mtzrl_header2 a {/*background: url(images/tzrllogo.png) no-repeat;*/
+.mtzrl_header2 a {/*background: url(/images/tzrllogo.png) no-repeat;*/
 	color: #fff;
 	background-size: 180px;
 	text-indent: -1000px;
@@ -325,7 +325,7 @@ a:hover {
 	margin: 0 auto;
 }
 .mtzrl_header .m_logo a {
-	background: url(images/tzrllogo.png) no-repeat 0 0;
+	background: url(/images/tzrllogo.png) no-repeat 0 0;
 	background-size: 150px;
 	display: block;
 	height: 100%;
@@ -386,7 +386,7 @@ a:hover {
 	cursor: pointer;
 }
 .search_btn {
-	background: url(images/search_icon.gif) no-repeat 0 0px;
+	background: url(/images/search_icon.gif) no-repeat 0 0px;
 	width: 21px;
 	height: 20px;
 }
@@ -414,7 +414,7 @@ a:hover {
 	display: block;
 }
 .hot_com h4 {
-	background: url(images/hot_bg.gif) repeat-x 0 0;
+	background: url(/images/hot_bg.gif) repeat-x 0 0;
 	border-top: 1px solid #DFDFDF;
 	font-size: 15px;
 	height: 35px;
@@ -969,7 +969,7 @@ a:hover {
 	position: relative;
 }
 .clear_history i {
-	background: url(images/trashcan.png) no-repeat 0 0 / 14px 14px;
+	background: url(/images/trashcan.png) no-repeat 0 0 / 14px 14px;
 	height: 14px;
 	left: 7px;
 	position: absolute;
@@ -1031,7 +1031,7 @@ a:hover {
 .log_box input[type="password"] {
 /*	-webkit-appearance: textfield;
 	border: 1px solid #69aae2;
-	background: url(images/login.png) no-repeat 5px;
+	background: url(/images/login.png) no-repeat 5px;
 	border-radius: 5px 5px 0 0;
 	display: block;
 	height: 18px;
@@ -1072,7 +1072,7 @@ a:hover {
 .log_box input[type="sfz"] {
 	-webkit-appearance: textfield;
 	border: 1px solid #69aae2;
-	background: url(images/sfz.png) no-repeat 5px;
+	background: url(/images/sfz.png) no-repeat 5px;
 	border-radius: 5px 5px 0 0;
 	display: block;
 	height: 18px;
@@ -1147,11 +1147,11 @@ footer, header, hgroup, menu, nav, section {
 	font-size: 12px;
 }
 .bottom_nav li:nth-child(1) a {
-	background: url(images/icons.png) center 3px no-repeat;
+	background: url(/images/icons.png) center 3px no-repeat;
 	background-size: 60px auto;
 }
 .bottom_nav li:nth-child(2) a {
-	background: url(images/icons.png) center -37px no-repeat;
+	background: url(/images/icons.png) center -37px no-repeat;
 	background-size: 60px auto;
 }
 .bottom_nav li:nth-child(3) a {
@@ -1161,15 +1161,15 @@ footer, header, hgroup, menu, nav, section {
 	height: 70px;
 	left: 0;
 	top: -20px;
-	background: url(images/icons.png) center -75px no-repeat;
+	background: url(/images/icons.png) center -75px no-repeat;
 	background-size: 56px auto;
 }
 .bottom_nav li:nth-child(4) a {
-	background: url(images/icons.png) center -168px no-repeat;
+	background: url(/images/icons.png) center -168px no-repeat;
 	background-size: 60px auto;
 }
 .bottom_nav li:nth-child(5) a {
-	background: url(images/icons.png) center -218px no-repeat;
+	background: url(/images/icons.png) center -218px no-repeat;
 	background-size: 60px auto;
 }
 .w {
@@ -1228,7 +1228,7 @@ footer, header, hgroup, menu, nav, section {
 	background: -webkit-gradient(linear, 30% 0, 0 30%, from(#FAFAFA), to(#DFDFDF));
 }
 .btn_back_l nav {
-	background: url(images/fanhui.png) center 6px no-repeat;
+	background: url(/images/fanhui.png) center 6px no-repeat;
 	position: absolute; top:-3px;
 	
 	left: 5px;
@@ -1867,7 +1867,7 @@ dl.agreement dd {
 input[type="checkbox"].inputCheckbox {
 	width: 18px;
 	height: 18px;
-	background: url(images/icon1.png) no-repeat 0 -74px;
+	background: url(/images/icon1.png) no-repeat 0 -74px;
 	background-size: 150px 150px;
 	vertical-align: middle;
 	-webkit-appearance: none;
@@ -1878,7 +1878,7 @@ input[type="checkbox"].inputCheckbox:checked {
 input[type="checkbox"].disabledCheckbox:checked {
 	width: 18px;
 	height: 18px;
-	background: url(images/icon1.png) no-repeat 0 -74px;
+	background: url(/images/icon1.png) no-repeat 0 -74px;
 	background-size: 150px 150px;
 	vertical-align: middle;
 	-webkit-appearance: none;
@@ -2007,7 +2007,7 @@ input[type="checkbox"].disabledCheckbox:checked {
 }
 .getbackpwd .tab_body .four .congratulation i {
 	display: inline-block;
-	background: url("images/success.png");
+	background: url("/images/success.png");
 	width: 53px;
 	height: 53px;
 	background-size: 53px;
@@ -2165,11 +2165,11 @@ input[type="checkbox"].disabledCheckbox:checked {
 	margin-top: -2px;
 }
 .msg_searcher i.i_email {
-	background: url(images/email.png);
+	background: url(/images/email.png);
 	background-size: 18px;
 }
 .msg_searcher i.i_searcher {
-	background: url(images/zoom.png);
+	background: url(/images/zoom.png);
 	background-size: 18px;
 }
 .msg_searcher li:last-child a {
@@ -2402,7 +2402,7 @@ input[type="checkbox"].disabledCheckbox:checked {
 	font-size: 14px;
 }
 .photo .photoFlag label {
-	background: url(images/icon1.png) no-repeat 3px -75px;
+	background: url(/images/icon1.png) no-repeat 3px -75px;
 	background-size: 150px 150px;
 	padding-left: 20px;
 }
@@ -3256,32 +3256,32 @@ input[type="checkbox"].disabledCheckbox:checked {
 	color: #555;
 }
 .bg_icon01 {
-	background: url(images/icon.png) no-repeat 10px 13px;
+	background: url(/images/icon.png) no-repeat 10px 13px;
 }
 .bg_icon02 {
-	background: url(images/icon.png) no-repeat 10px -32px;
+	background: url(/images/icon.png) no-repeat 10px -32px;
 }
 .bg_icon03 {
-	background: url(images/icon.png) no-repeat 10px -83px;
+	background: url(/images/icon.png) no-repeat 10px -83px;
 }
 .bg_icon04 {
-	background: url(images/icon.png) no-repeat 10px -137px;
+	background: url(/images/icon.png) no-repeat 10px -137px;
 }
 .bg_icon05 {
-	background: url(images/icon.png) no-repeat 10px -192px;
+	background: url(/images/icon.png) no-repeat 10px -192px;
 }
 .bg_icon06 {
-	background: url(images/icon.png) no-repeat 10px -247px;
+	background: url(/images/icon.png) no-repeat 10px -247px;
 }
 .bg_icon07 {
-	background: url(images/icon.png) no-repeat 10px -306px;
+	background: url(/images/icon.png) no-repeat 10px -306px;
 }
 .new_style {
 	background: -webkit-gradient(linear, left top, left bottom, from(#d4e8ff), to(#fff)) #fcfcfc;
 	padding: 10px 20px 0 20px;
 }
 .pre_next {
-	background: url(images/pre_next.png) no-repeat;
+	background: url(/images/pre_next.png) no-repeat;
 	padding-right: 10px;
 	margin-top: 150px;
 	float: right;
@@ -3330,7 +3330,7 @@ input[type="checkbox"].disabledCheckbox:checked {
 	text-align: center;
 }
 .top a.aleft {
-	background: url(images/home.png) center 6px no-repeat;
+	background: url(/images/home.png) center 6px no-repeat;
 	position: absolute;
 	top: 5px;
 	left: 5px;
@@ -3340,7 +3340,7 @@ input[type="checkbox"].disabledCheckbox:checked {
 	background-size: auto 20px;
 }
 .top a.aright {
-	background: url(images/user.png) center 6px no-repeat;
+	background: url(/images/user.png) center 6px no-repeat;
 	position: absolute;
 	top: 4px;
 	right: 5px;

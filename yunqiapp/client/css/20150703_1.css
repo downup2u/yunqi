@@ -577,8 +577,8 @@ color:#566197;
 
 .header .menu{z-index:2;position:relative;float:right;width:5em;height:2.2em;background-size:1.5em;line-height:2.7em; font-size:0.8em; transition:background .3s; color:#fff; 
 }
-.header .menu.active{/*background-image:url(images/menu-active.png);background-size: 0.8rem*/}
-.header .menu.active:after{content: " ";display: block;position: absolute;bottom: 0;width: 100%;height: .35em;/*background:url(images/connect.png) no-repeat center 0;*/}
+.header .menu.active{/*background-image:url(/images/menu-active.png);background-size: 0.8rem*/}
+.header .menu.active:after{content: " ";display: block;position: absolute;bottom: 0;width: 100%;height: .35em;/*background:url(/images/connect.png) no-repeat center 0;*/}
 .header .h_label{position:absolute;width:100%;height:2.2em;text-align:center;font-weight:normal;color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;}
 
 
@@ -630,7 +630,7 @@ color:#566197;
 .coubox_m th {
     color: #8e0c3a;
     height: 60px;
-    padding-bottom: 20px; padding-top:10px; font-size:1.8em; background:url(images/b.jpg) no-repeat center; background-size:2.3em 2.6em;
+    padding-bottom: 20px; padding-top:10px; font-size:1.8em; background:url(/images/b.jpg) no-repeat center; background-size:2.3em 2.6em;
 }
 .cou_mon {
     font-size: 64px;

@@ -2663,7 +2663,7 @@ html, body {
     outline: 3px solid #e0e0e0;
 }
 .m-ordercoupon-list > li > span {
-    background: url("images/yhq.png") no-repeat scroll 0 0 / 100% 100% #80e26f;
+    background: url("/images/yhq.png") no-repeat scroll 0 0 / 100% 100% #80e26f;
     border-right: 1px dashed rgba(255, 255, 255, 0.3);
     display: inline-block;
     float: left;
@@ -2675,7 +2675,7 @@ html, body {
     width: 32%;
 }
 .qww {
-    background: url("images/yhq.png") no-repeat scroll 0 0 / 100% 100% #ccc;
+    background: url("/images/yhq.png") no-repeat scroll 0 0 / 100% 100% #ccc;
     border-right: 1px dashed rgba(255, 255, 255, 0.3);
     display: inline-block;
     float: left;
