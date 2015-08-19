@@ -19,6 +19,7 @@ AutoForm.hooks({
 
 			var currentUserId = Meteor.userId();
 			var orderData = {
+        orderno:Random.id([8]),
 				createuser:currentUserId,
 				contactname:doc.contactname,
 				contacttel:doc.contacttel,
