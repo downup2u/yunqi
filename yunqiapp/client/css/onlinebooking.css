@@ -71,8 +71,8 @@ ul.round {
 	-moz-box-shadow:0 1px 1px #f6f6f6;
 	-webkit-box-shadow:0 1px 1px #f6f6f6;
 	box-shadow:0 1px 1px #f6f6f6;
-	margin-bottom:5px;
-	display:block
+	margin:0 5px;margin-bottom:5px;
+	display:block ; 
 }
 
 ul.round li {
@@ -94,13 +94,18 @@ ul.round li:last-of-type {
 	display:block;
 	background:url(../img/arrow3.png) no-repeat right 50%;
 	-webkit-background-size:8.5px 13px;
+	background-size:8.5px 13px; float:right;
+	position:relative;padding:4px 20px 9px 0; 
+	
+	font-size:16px;
+	min-height: 22px; margin-top:-35px;
+}
+.round li h2.none {	-webkit-background-size:8.5px 13px;
 	background-size:8.5px 13px;
 	padding:10px 20px 9px 0;
 	position:relative;
 	font-size:16px;
 	min-height: 22px;
-}
-.round li span.none {
     background: none repeat scroll 0 0 transparent;
 }
 .round li span.noneorder {
@@ -127,7 +132,7 @@ ul.round li:last-of-type {
 }
 .round li.dandanb {
 	border-color:#EBEBEB;
-}.round li input{ color:#888}
+}.round li input{ color:#888; font-size:16px;line-height:30px; border-radius:5px}
 .round li.nob .px{
     border-radius:5px;
 	-webkit-border-radius:5px;
@@ -164,6 +169,8 @@ ul.round li:last-of-type {
 .m-order-content > li .m-order-item:last-child {
     border-bottom: medium none;
 }
+.round li table td.qwer span{ float:left; height:20px; margin:0; padding:0; height:1px}
+
 .m-order-item > a:before {
     color: #a7a7a7;
     content: "";
@@ -316,12 +323,17 @@ element.style {
 }
 label {
     display: inline-block;
-    font-weight: bold;
+    font-weight: 100; font-size:18px;
+    margin-bottom: 5px;
+    max-width: 100%;
+}label input{
+    display: inline-block;
+    font-weight: 100; font-size:18px;
     margin-bottom: 5px;
     max-width: 100%;
 }
-
-.bwe{ background:url(images/order_bg1.png) repeat-x top;  background-size:1.2em 0.3em ; padding-bottom:5px;}
+.tj{ width:96%; margin:0 2%; margin-bottom:15px; margin-top:10px; text-align:center}
+.bwe{ background:url(images/order_bg1.png) repeat-x top; font-size:18px;  background-size:1.2em 0.3em ; padding-bottom:5px;}
 
 .round li.nob .dropdown-select{
     border-radius:5px;
@@ -443,7 +455,19 @@ ul.round li.nob:last-of-type {
 
 	font-style:normal;
 }
-em.ok{
+em.ok{	display:block;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	color:#e5004b;
+	font-size: 20px;
+  
+    margin-top: 10px;
+    padding: 4px 8px;
+    
+   
+    top: 50%;
+
+	font-style:normal;
 	
 }
 em.error{
@@ -492,7 +516,7 @@ ul.round li.pad { padding-right:15px;}
 	-webkit-border-radius: 5px 5px 0 0;
 	-moz-border-radius: 5px 5px 0 0;
 	-o-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;   padding: 10px 10px 5px;
 }
 .round li.title span{
     padding: 8px 15px 4px 0;font-size: 1.3em; color:#111;
@@ -504,7 +528,7 @@ ul.round li.pad { padding-right:15px;}
 
 
 .kuang th {
-    color: #666;padding:0; font-size:1.2em; font-weight:normal;text-align: left;width: 89px;
+    color: #666;padding:0; font-size:18px; font-weight:normal;text-align: left;width: 89px;
 }
 .kuang td {
     color: #666;padding:0;

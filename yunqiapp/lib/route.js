@@ -1,4 +1,4 @@
-
+﻿
 Router.route('/', function () {
   this.layout('mainlayout');
   this.render('navbar0', {to: 'navbar'});
@@ -62,7 +62,7 @@ Router.route('/tabhome/:_tabindex', function () {
 Router.route('/homedetail/producttype/:_tabindex', function () {
     console.log("/homedetail/producttype");
     
-    this.layout('indexdetailpagelayout',{data: {title: '选择产品',returnurl:'/wyxd/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
+    this.layout('indexdetailpagelayout',{data: {title: '选择产品',returnurl:'/homedetail/neworder/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
   
     this.render('producttype', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex}});
 });

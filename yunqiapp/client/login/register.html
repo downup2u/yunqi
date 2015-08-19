@@ -4,19 +4,19 @@
    <div class="log_box">
        <li class="username">
       <span> <i class="icon-user"></i> </span>
-    {{> afQuickField name='username' label=false}}
+    {{> afQuickField name='username' label=false placeholder="输入用户名"}}
     </li>
      <li class="username">
       <span> <i class="icon-phone"></i> </span>
-    {{> afQuickField name='phone' label=false}}
+    {{> afQuickField name='phone' label=false placeholder="输入手机号"}}
      </li>
      <li class="username">
       <span> <i class="icon-key"></i> </span>
-    {{> afQuickField name='password' type='password' label=false}}
+    {{> afQuickField name='password' type='password' label=false placeholder="输入密码"}}
      </li>
      <li class="username">
       <span> <i class="icon-key"></i> </span>
-    {{> afQuickField name='passwordConfirmation' type='password' label=false}}
+    {{> afQuickField name='passwordConfirmation' type='password' label=false  placeholder="再次输入密码"}}
     </li>
   
   {{#if isLoading}}

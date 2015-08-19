@@ -1,4 +1,4 @@
-Schemas = {}
+﻿Schemas = {}
 Schemas.Mixins = {}
 
 Schemas.Mixins.username = {

@@ -11,6 +11,8 @@ a { text-decoration: none; cursor:pointer; }
 /*{ text-decoration: underline; }*/
 html, a, input, button { -webkit-tap-highlight-color:rgba(0,0,0,0);}
 /* hn */
+.serss{font-size:18px; border-bottom:1px solid #ddd; padding-bottom:10px;}
+.serqw{font-size:18px; border-bottom:1px solid #ddd; padding:10px 0;}
 h1 { font-size:1.6rem; line-height:3.0rem; }
 h2 { font-size:1.4rem; line-height:2rem; }
 h3 { line-height:2.4rem; }
@@ -36,12 +38,13 @@ button, html input[type="button"], input[type="reset"], input[type="submit"], .s
 }
 button[disabled], input[disabled], .disable { cursor: default; }
 input[type="checkbox"], input[type="radio"], .form-radio, .form-checkbox { box-sizing: border-box; padding: 0; }
-fieldset { border: 1px solid #c0c0c0; background:#fff; margin: 0 2px 18px; padding: 0.35em 0.625em 0.75em; }
+fieldset { border: 1px solid #e0e0e0; background:#fff;  margin: 15px 5px 18px; border-radius:5px; padding: 0.35em 0.625em 0.75em; }
 legend { border: 0; padding: 0; white-space: normal; }
 button::-moz-focus-inner, input::-moz-focus-inner {
  border: 0;
  padding: 0;
 }
+.qwa{font-size:17px; border-bottom:1px solid #e0e0e0; width:100%; margin-bottom:10px;}
 /* -------------------------------------------------
  * css3 & html5
  * -------------------------------------------------
