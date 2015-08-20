@@ -170,11 +170,11 @@ Router.route('/homedetail/cxhd/:_tabindex', function () {
     this.render('cxhd', {to: 'detailpagecontent'});
 });
 
-Router.route('/homedetail/yqcx/:_tabindex', function () {
+Router.route('/homedetail/orderquery/:_tabindex', function () {
      
      this.layout('indexdetailpagelayout',{data: {title: '用气查询',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
    
-    this.render('yqcx', {to: 'detailpagecontent'});
+    this.render('orderquery', {to: 'detailpagecontent'});
 });
 
 Router.route('/homedetail/wdhb/:_tabindex', function () {

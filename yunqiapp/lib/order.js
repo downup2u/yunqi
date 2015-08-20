@@ -1,5 +1,25 @@
 Order = new Mongo.Collection('order');
 
+EasySearch.createSearchIndex('order', {
+  field: [
+    'orderno',
+  ],
+  collection: Order,
+  limit: 20,
+  query: function (searchString, opts) {
+    console.log(searchString);
+    if(searchString.length == 0) {
+			searchString = { '$regex' : '.*' + searchString + '.*', '$options' : 'i' };
+		}
+    // Default query that is used for searching
+    var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
+    return query;
+  },
+  sort: function() {
+		return { "createtime": -1 }
+	}
+});
+
 if(Meteor.isClient){
 	
 };
