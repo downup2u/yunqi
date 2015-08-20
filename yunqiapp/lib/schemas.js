@@ -48,13 +48,13 @@ Schema.Order = new SimpleSchema({
         type: String,
         label: "支付方式",
         autoform: {
-      type: "select-radio",
-      options: function () {
-        return [
-          {label: "货到付款", value: 0},
-          {label: "支付宝", value: 1},
-        ];
-      }
+          type: "select-radio",
+         options: function () {
+            return [
+              {label: "货到付款", value: 0},
+              {label: "支付宝", value: 1},
+            ];
+        }
     }
     },
 });
