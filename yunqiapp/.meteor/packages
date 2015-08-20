@@ -11,6 +11,7 @@ iron:router
 accounts-password
 aldeed:autoform
 reactive-dict
+mrt:moment
 yogiben:admin
 matteodem:easy-search
 fortawesome:fontawesome

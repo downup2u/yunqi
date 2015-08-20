@@ -15,8 +15,6 @@ AutoForm.hooks({
             for( j in productlistsession){
                 amount += (productlistsession[j].productprice * productlistsession[j].qty);
             };
-    
-
 			var currentUserId = Meteor.userId();
 			var orderData = {
         orderno:Random.id([8]),
@@ -31,7 +29,7 @@ AutoForm.hooks({
                 orderstatus:'neworder',
                 orderstatusstring:'待支付',
                 orderamount:amount,
-                createtime:new Date(),
+                createtime:moment().format('YYYY-MM-DD HH:mm:ss'),
                 orderproductlists:productlistsession
 			};
    		Meteor.call('insertOrder', orderData);
