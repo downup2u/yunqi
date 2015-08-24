@@ -10,7 +10,7 @@
       'allorders':function(){
          var currentUserId = Meteor.userId();
          var orders = Order.find({createuser:currentUserId});
-         console.log("allorders:"+orders.count());
+         console.log("allorders:"+EJSON.stringify(orders));
          return orders;
       },
  });

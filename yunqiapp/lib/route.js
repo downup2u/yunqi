@@ -178,9 +178,14 @@ Router.route('/homedetail/yhq/:_tabindex', function () {
      this.render('yhq', {to: 'detailpagecontent'});
 });
 
-Router.route('/profile/dz', function () {
-    this.layout('indexdetailpagelayout',{data: {title: '地址',returnurl:'/tabhome/2',returnhome:'/tabhome/2'}});
+Router.route('/profile/useraddress', function () {
+    this.layout('indexdetailpagelayout',{data: {title: '地址',returnurl:'/tabhome/1',returnhome:'/tabhome/1'}});
     this.render('useraddress', {to: 'detailpagecontent'});
+});
+
+Router.route('/profile/adduseraddress', function () {
+    this.layout('indexdetailpagelayout',{data: {title: '地址',returnurl:'/profile/useraddress',returnhome:'/tabhome/1'}});
+    this.render('adduseraddress', {to: 'detailpagecontent'});
 });
 
 Router.route('/bz', function () {
