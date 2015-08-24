@@ -1,10 +1,11 @@
 
 
 Meteor.startup(function(){
-    
+    console.log("start up");
     if(Meteor.isClient){
-        console.log("client start...0")
-     AutoForm.setDefaultTemplate("plain");
+        console.log("client start...0");
+        Meteor.subscribe("userAddress");
+     //AutoForm.setDefaultTemplate("plain");
    //  AutoForm.setDefaultTemplateForType('afFieldInput', 'plain');
        // AutoForm.setDefaultTemplate('nothing');
     //AutoForm.setDefaultTemplate('bootstrap3');
@@ -52,5 +53,13 @@ Meteor.startup(function(){
         }
 
     }
+    
+    Meteor.publish("userAddress", function () {
+        if (this.userId) {
+            return Meteor.users.find({_id: this.userId});
+        } else {
+            this.ready();
+        }
+     });
  }
 });

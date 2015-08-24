@@ -1,9 +1,9 @@
 ﻿
 Router.route('/', function () {
+  console.log("index html");
   this.layout('mainlayout');
   this.render('navbar0', {to: 'navbar'});
   this.render('home', {to: 'content'});
-
 });
 
 
@@ -11,7 +11,7 @@ Router.route('/profile', function () {
   this.layout('mainlayout');
   this.render('navbar1', {to: 'navbar'});
   if (Meteor.user()) {
-      console.log("login");
+     console.log("login");
      var currentUserId = Meteor.userId();
      var countallorders = Order.find({createuser:currentUserId}).count();
      var countneworders = Order.find({createuser:currentUserId,orderstatus:'neworder'}).count();
@@ -61,9 +61,7 @@ Router.route('/tabhome/:_tabindex', function () {
 
 Router.route('/homedetail/producttype/:_tabindex', function () {
     console.log("/homedetail/producttype");
-    
     this.layout('indexdetailpagelayout',{data: {title: '选择产品',returnurl:'/homedetail/neworder/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
-  
     this.render('producttype', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex}});
 });
 
@@ -83,10 +81,8 @@ Router.route('/homedetail/wyxd/:_tabindex', function () {
   
     console.log("我要下单："+this.params._tabindex);
     this.layout('indexdetailpagelayout',{data: {title: '我要下单',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
-   
     this.render('wyxd', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,orderamount:getSessionOrderAmount()}});
-    
-
+  
 $});
 
 Router.route('/homedetail/neworder/:_tabindex', function () {
@@ -153,47 +149,38 @@ Router.route('/homedetail/ddxq/:_tabindex/:_id', function () {
     //     this.render('allclosedorders', {to: 'orderscontent'});
     // }
    curorder = Order.findOne({_id:this.params._id});
- 
    this.render('orderproduct', {data:{tabindex:this.params._tabindex,order:curorder}});
-     
    this.render('ddxq', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,order:curorder}});
-  
-    var id = this.params._id; // "5"
-    Session.set("curtab",id);
+   var id = this.params._id; // "5"
+   Session.set("curtab",id);
 });
 
 
 Router.route('/homedetail/cxhd/:_tabindex', function () {
-    
     this.layout('indexdetailpagelayout',{data: {title: '促销活动',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
-   
     this.render('cxhd', {to: 'detailpagecontent'});
 });
 
 Router.route('/homedetail/orderquery/:_tabindex', function () {
-     
-     this.layout('indexdetailpagelayout',{data: {title: '用气查询',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
-   
+    this.layout('indexdetailpagelayout',{data: {title: '用气查询',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
     this.render('orderquery', {to: 'detailpagecontent'});
 });
 
 Router.route('/homedetail/wdhb/:_tabindex', function () {
    
-       this.layout('indexdetailpagelayout',{data: {title: '我的红包',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
-   
+    this.layout('indexdetailpagelayout',{data: {title: '我的红包',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
     this.render('wdhb', {to: 'detailpagecontent'});
 });
 
 Router.route('/homedetail/yhq/:_tabindex', function () {
    
-        this.layout('indexdetailpagelayout',{data: {title: '优惠券',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
-   
+     this.layout('indexdetailpagelayout',{data: {title: '优惠券',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
      this.render('yhq', {to: 'detailpagecontent'});
 });
 
 Router.route('/profile/dz', function () {
     this.layout('indexdetailpagelayout',{data: {title: '地址',returnurl:'/tabhome/2',returnhome:'/tabhome/2'}});
-    this.render('dz', {to: 'detailpagecontent'});
+    this.render('useraddress', {to: 'detailpagecontent'});
 });
 
 Router.route('/bz', function () {

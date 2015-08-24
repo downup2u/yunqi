@@ -34,7 +34,7 @@ AutoForm.hooks({
 			};
    		Meteor.call('insertOrder', orderData);
        Router.go('/profile')
-      return false
+       return false
     },
     onSuccess: function (operation, result, template){
       
