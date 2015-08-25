@@ -197,3 +197,59 @@ Router.route('/logout', function () {
     Meteor.logout();
     this.redirect('/profile');
 });
+
+
+Router.route('/homedetail/getredpackage/:_tabindex', function () {
+    var tabindex = this.params._tabindex;
+    var isavaliable = false;
+    var redpackagetoshow = {};
+    var cursysredpackagelist = SystemRedPackages.find();
+    var curtime = moment().format('YYYY-MM-DD HH:mm:ss');
+    cursysredpackagelist.forEach(function (redpackage) {
+        if(redpackage.starttime <= curtime && redpackage.endtime >=  curtime){
+                redpackagetoshow =  redpackage;
+                isavaliable = true;
+        }
+    });    
+    console.log("红包显示页：:" + EJSON.stringify(redpackagetoshow));
+    var data = {
+        isavaliable:isavaliable,
+        redpackage:redpackagetoshow,
+    }
+    this.layout('indexdetailpagelayout',{data: {title: '我的红包',returnurl:'/tabhome/'+tabindex,returnhome:'/tabhome/'+tabindex}});
+    this.render('getredpackage', {to: 'detailpagecontent',data:data});
+
+
+});
+// Router.route('/homedetail/getredpackage/:_tabindex', function () {
+//     var tabindex = this.params._tabindex;
+//     this.layout('indexdetailpagelayout',{data: {title: '我的红包',returnurl:'/tabhome/'+tabindex,returnhome:'/tabhome/'+tabindex}});
+//     this.render('getredpackage',{
+//         data:function(){
+//             return { to: 'detailpagecontent',data:function(){
+//                 Meteor.call('showsystemredpackage',function(err,result){
+//                 var isavaliable = false;
+//                 if(result){
+//                     isavaliable = true;
+//                     console.log("红包显示页："+EJSON.stringify(result));
+//                 }
+//                 var data = {
+//                     isavaliable:isavaliable,
+//                     redpackage:result,
+//                 }
+//                 return data;
+//             }; 
+//         });
+//        }
+//     });
+
+// });
+
+Router.route('/homedetail/myredpackages/:_tabindex', function () {
+
+        this.layout('indexdetailpagelayout',{data: {title: '我的红包',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
+        this.render('myredpackages', {to: 'detailpagecontent'});
+    
+
+});
+

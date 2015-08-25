@@ -29,7 +29,7 @@ if(Meteor.isServer){
 
 	Meteor.methods({
 		'insertOrder': function(orderData){
-		var currentUserId = Meteor.userId();
+		//var currentUserId = Meteor.userId();
   	Order.insert(orderData);
 		}
 	});
