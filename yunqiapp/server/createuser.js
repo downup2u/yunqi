@@ -33,7 +33,7 @@ Meteor.methods({
       }	          
     }
     addresslist.push(addressDoc);
-    Meteor.call('setAddress', addresslist);
+      Meteor.call('setAddress', addresslist);
 		},
     'setAddress':function(addresslist){
           console.log("address:" + EJSON.stringify(addresslist));

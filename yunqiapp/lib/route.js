@@ -156,10 +156,18 @@ Router.route('/homedetail/ddxq/:_tabindex/:_id', function () {
 });
 
 
-Router.route('/homedetail/cxhd/:_tabindex', function () {
+Router.route('/homedetail/salespromotions/:_tabindex', function () {
     this.layout('indexdetailpagelayout',{data: {title: '促销活动',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
-    this.render('cxhd', {to: 'detailpagecontent'});
+    var salespromotions = [];
+    SalesPromotions.find().forEach(function(sp){
+        console.log("促销活动(get one):" + EJSON.stringify(sp));
+        salespromotions.push(sp);
+    });
+    console.log("促销活动:" + EJSON.stringify(salespromotions));
+    this.render('salespromotions', {to: 'detailpagecontent',data:{salespromotions:salespromotions}});
 });
+
+
 
 Router.route('/homedetail/orderquery/:_tabindex', function () {
     this.layout('indexdetailpagelayout',{data: {title: '用气查询',returnurl:'/tabhome/'+this.params._tabindex,returnhome:'/tabhome/'+this.params._tabindex}});
