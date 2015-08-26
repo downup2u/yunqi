@@ -8,6 +8,7 @@ Meteor.startup(function(){
         Meteor.subscribe("redpackage");
         Meteor.subscribe("coupons");
         Meteor.subscribe("salespromotions");
+        Meteor.subscribe("products");
         
       //AutoForm.setDefaultTemplate("plain");
    //  AutoForm.setDefaultTemplateForType('afFieldInput', 'plain');
@@ -180,6 +181,10 @@ Meteor.startup(function(){
     }
     
     //===================================================================
+    //发布产品数据
+    Meteor.publish("products",function(){
+        return Products.find();
+    });
     //发布用户数据
     Meteor.publish("userData", function () {
         if (this.userId) {

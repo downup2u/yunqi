@@ -1,3 +1,32 @@
 <template name="adminproducts">
-	products
+	产品管理
+	<a href="/admin/addproduct">新增产品</a>
+	<table>
+		<thread>
+			<tr>
+			<td>产品id</td>
+			<td>产品名</td>
+			<td>新建时间</td>
+			<td>价格</td>
+			<td>库存</td>
+			<td>状态</td>
+			<td></td>
+			</tr>
+		</thread>
+		<tbody>
+			 {{#each products}}
+			<tr>
+				<td>{{_id}}</td>
+				<td>{{productname}}</td>
+				<td>{{createtime}}</td>
+				<td>{{productprice}}</td>
+				<td>{{stockqty}}</td>
+				<td>{{status}}</td>
+				<td><a href="/admin/updateproduct/{{_id}}">修改</a>
+				<a href="#" class="btnsetoffline">下架</a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>

@@ -1,0 +1,20 @@
+<template name="adminproductadd">
+	<form>
+		<input type="text" id="productname" placeholder="产品名">
+		<input type="number" id="productprice" placeholder="单价">
+		<input type="number" id="stockqty" placeholder="库存">
+		<input type="checkbox" id="isonline"> 上架
+		<a href="#"  class="btnaddproduct">新增</a>
+	</form>
+</template>
+
+<template name="adminproductupdate">
+	<form>
+		<input type="text" id="productname" value="{{curproduct.productname}}">
+		<input type="number" id="productprice" value="{{curproduct.productprice}}">
+		<input type="number" id="stockqty" value="{{curproduct.stockqty}}">
+		<input type="checkbox" id="isonline"> 上架
+		<a href="#"  class="btnupdateproduct">修改</a>
+	</form>
+</template>
+	
