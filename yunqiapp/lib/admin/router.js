@@ -47,23 +47,44 @@ Router.route('/admin/navusers', function () {
 });
 
 Router.route('/admin/navsalespromotions', function () {
-  console.log("admin navsalespromotions html");
+    
+
+  var salespromotions = [];
+  SalesPromotions.find().forEach(function(sp){
+      salespromotions.push(sp);
+  });
+  console.log("展示促销活动:" + EJSON.stringify(salespromotions));
+
+  
   this.layout('adminmainlayout');
   this.render('adminnavbar', {to: 'adminnavbar'});
-  this.render('adminsalespromotions', {to: 'admincontent'});
+  this.render('adminsalespromotions', {to: 'admincontent',data:{salespromotions:salespromotions}});
 });
 
 Router.route('/admin/navcoupons', function () {
-  console.log("admin navcoupons html");
+  var coupons = [];
+  Coupons.find().forEach(function(cn){
+      coupons.push(cn);
+  });
+  console.log("展示优惠券:" + EJSON.stringify(coupons));
+  
+  
   this.layout('adminmainlayout');
   this.render('adminnavbar', {to: 'adminnavbar'});
-  this.render('admincoupons', {to: 'admincontent'});
+  this.render('admincoupons', {to: 'admincontent',data:{coupons:coupons}});
 });
 
 Router.route('/admin/redpackages', function () {
-  console.log("admin redpackages html");
+  
+  var redpackages = [];
+  SystemRedPackages.find().forEach(function(rk){
+      redpackages.push(rk);
+  });
+  console.log("展示红包:" + EJSON.stringify(redpackages));
+
+
   this.layout('adminmainlayout');
   this.render('adminnavbar', {to: 'adminnavbar'});
-  this.render('adminredpackages', {to: 'admincontent'});
+  this.render('adminredpackages', {to: 'admincontent',data:{redpackages:redpackages}});
 });
 

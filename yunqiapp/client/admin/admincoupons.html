@@ -1,3 +1,34 @@
 <template name="admincoupons">
-	coupons
+		优惠券管理
+	<a href="/admin/addcoupon">新增红包</a>
+	<table>
+		<thread>
+			<tr>
+			<td>优惠券id</td>
+			<td>优惠券名</td>
+			<td>生成时间</td>
+			<td>开始时间</td>
+			<td>结束时间</td>
+			<td>满金额</td>
+			<td>送金额</td>
+			<td></td>
+			</tr>
+		</thread>
+		<tbody>
+			 {{#each coupons}}
+			<tr>
+				<td>{{_id}}</td>
+				<td>{{title}}</td>
+				<td>{{createtime}}</td>
+				<td>{{starttime}}</td>
+				<td>{{endtime}}</td>
+				<td>{{conditionamout}}</td>
+				<td>{{offamout}}</td>
+				<td><a href="/admin/updatecoupon/{{_id}}">修改</a>
+				<a href="/admin/disablecoupon/{{_id}}">作废</a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>

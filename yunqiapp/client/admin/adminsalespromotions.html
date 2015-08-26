@@ -1,3 +1,38 @@
 <template name="adminsalespromotions">
-	sales promotions
+	促销管理
+	<a href="/admin/addsalespromotion">新增促销</a>
+	<table>
+		<thread>
+			<tr>
+			<td>促销id</td>
+			<td>促销名</td>
+			<td>促销类型</td>
+			<td>详细类型</td>
+			<td>生成时间</td>
+			<td>开始时间</td>
+			<td>结束时间</td>
+			<td>针对产品</td>
+			<td>满金额</td>
+			<td></td>
+			</tr>
+		</thread>
+		<tbody>
+			 {{#each salespromotions}}
+			<tr>
+				<td>{{_id}}</td>
+				<td>{{title}}</td>
+				<td>{{typeorder}}</td>
+				<td>{{subtype}}</td>
+				<td>{{createtime}}</td>
+				<td>{{starttime}}</td>
+				<td>{{endtime}}</td>
+				<td>{{productname}}</td>
+				<td>{{conditionamout}}</td>
+				<td><a href="/admin/updatesalespromotion/{{_id}}">修改</a>
+				
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>

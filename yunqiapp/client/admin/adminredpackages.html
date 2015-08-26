@@ -1,3 +1,36 @@
 <template name="adminredpackages">
-	redpackages
+		红包管理
+	<a href="/admin/addredpackage">新增红包</a>
+	<table>
+		<thread>
+			<tr>
+			<td>红包id</td>
+			<td>红包名</td>
+			<td>生成时间</td>
+			<td>开始时间</td>
+			<td>结束时间</td>
+			<td>总个数</td>
+			<td>剩余个数</td>
+			<td>金额</td>
+			<td></td>
+			</tr>
+		</thread>
+		<tbody>
+			 {{#each redpackages}}
+			<tr>
+				<td>{{_id}}</td>
+				<td>{{title}}</td>
+				<td>{{createtime}}</td>
+				<td>{{starttime}}</td>
+				<td>{{endtime}}</td>
+				<td>{{amountcount}}</td>
+				<td>{{leftcount}}</td>
+				<td>{{money}}</td>
+				<td><a href="/admin/updateredpackage/{{_id}}">修改</a>
+				<a href="/admin/redpackage/{{_id}}">详情</a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>
