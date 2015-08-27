@@ -93,7 +93,7 @@ Router.route('/admin/navcoupons', function () {
   this.render('admincoupons', {to: 'admincontent',data:{coupons:coupons}});
 });
 
-Router.route('/admin/redpackages', function () {
+Router.route('/admin/navredpackages', function () {
   
   var redpackages = [];
   SystemRedPackages.find().forEach(function(rk){
