@@ -2,19 +2,24 @@ Template.addredpackage.events({
     "click .btnaddredpackage": function () {
            console.log("click btn add redpackage");
            event.preventDefault();
-          // var productname= $('#productname').val();
-          // var productprice= $('#productprice').val();
-          // var stockqty= $('#stockqty').val();
-          // var productDoc = {
-          //     productname:productname,
-          //     productprice:productprice,
-          //     stockqty:stockqty,
-          //     createtime:moment().format('YYYY-MM-DD HH:mm:ss'),
-          //     isonline:true
-          // }
-          // console.log("insert product:" + EJSON.stringify(productDoc));
-          // Meteor.call("insertProduct",productDoc);
-          // Products.insert(productDoc);        
+          var title= $('#title').val();
+          var money= $('#money').val();
+          var starttime= $('#starttime').val();//时间日期类型
+          var endtime= $('#endtime').val();//时间日期类型
+          var amountcount = $('#amountcount').val();
+          var offamount = $('#offamount').val();
+          var redpackageDoc = {
+              title:title,
+              money:money,
+              starttime:starttime,
+              endtime:endtime,
+              createtime:moment().format('YYYY-MM-DD HH:mm:ss'),
+              amountcount:amountcount,
+              offamount:offamount,
+              isavaliable:true
+          }
+          console.log("insert redpackage:" + EJSON.stringify(redpackageDoc));
+          Meteor.call("createsystemredpackage",redpackageDoc);
           Router.go("/admin/navredpackages");
     
     },    
