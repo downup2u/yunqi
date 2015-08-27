@@ -1,3 +1,32 @@
 <template name="adminusers">
-	users
+	用户管理
+	
+	<table>
+		<thread>
+			<tr>
+			<td>用户id</td>
+			<td>用户名</td>
+			<td>新建时间</td>
+			<td>默认地址</td>
+			<td>联系人</td>
+			<td>电话</td>
+			<td>备注</td>
+			</tr>
+		</thread>
+		<tbody>
+			 {{#each products}}
+			<tr>
+				<td>{{_id}}</td>
+				<td>{{productname}}</td>
+				<td>{{createtime}}</td>
+				<td>{{productprice}}</td>
+				<td>{{stockqty}}</td>
+				<td>{{status}}</td>
+				<td><a href="/admin/updateproduct/{{_id}}">修改</a>
+				<a href="#" class="btnsetoffline">下架</a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
 	</template>

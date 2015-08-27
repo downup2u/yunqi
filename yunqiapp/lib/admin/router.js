@@ -5,11 +5,30 @@ Router.route('/admin', function () {
   this.render('adminnavbar', {to: 'adminnavbar'});
   this.render('adminorders', {to: 'admincontent'});
 });
-
+//发布产品
 Router.route('/admin/addproduct', function () {
   console.log("admin addproduct html");
   this.render('adminproductadd');
  });
+ //发布红包
+ Router.route('/admin/addredpackage', function () {
+  console.log("admin addredpackage html");
+  this.render('addredpackage');
+ });
+ //发布促销
+ Router.route('/admin/addsalespromotion', function () {
+  console.log("admin addsalespromotion html");
+  this.render('addsalespromotion');
+ });
+ //新增优惠券
+ Router.route('/admin/addcoupon', function () {
+  console.log("admin addcoupon html");
+  this.render('addcoupon');
+ });
+ 
+
+ 
+ 
  
  Router.route('/admin/updateproduct/:id', function () {
   console.log("admin updateproduct html");

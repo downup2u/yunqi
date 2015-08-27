@@ -27,14 +27,16 @@ Template.adminproductupdate.events({
 	   var productname= $('#productname').val();
 	   var productprice= $('#productprice').val();
 	   var stockqty= $('#stockqty').val();
+       var isonline = $("#isonline").is(':checked');
+       
        var productDoc = {
             productname:productname,
             productprice:productprice,
             stockqty:stockqty,
             createtime:moment().format('YYYY-MM-DD HH:mm:ss'),
-            isonline:true
+            isonline:isonline
        }
-       console.log("update product:" + EJSON.stringify(productDoc)+"id:" +this.curproduct._id );
+       console.log("update product:" + EJSON.stringify(productDoc)+",id:" +this.curproduct._id +",isonline:" +  isonline);
        Meteor.call("updateProduct",this.curproduct._id,productDoc);
       // Products.insert(productDoc);        
        Router.go("/admin/navproducts");

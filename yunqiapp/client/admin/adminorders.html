@@ -19,14 +19,16 @@
 		<tbody>
 			 {{#each products}}
 			<tr>
-				<td>{{_id}}</td>
-				<td>{{productname}}</td>
+				<td><a href="/order/{{_id}}">{{orderno}}</a></td>
+				<td>{{createuser}}</td>
 				<td>{{createtime}}</td>
-				<td>{{productprice}}</td>
-				<td>{{stockqty}}</td>
-				<td>{{status}}</td>
-				<td><a href="/admin/updateproduct/{{_id}}">修改</a>
-				<a href="#" class="btnsetoffline">下架</a>
+				<td>{{orderamount}}</td>
+				<td>{{deliveryaddress}}</td>
+				<td>{{contactname}}</td>
+				<td>{{contacttel}}</td>
+				<td>{{yunqimemo}}</td>
+				<td><a href="/admin/updateorder/{{_id}}">发货</a>
+		
 				</td>
 			</tr>
 			{{/each}}
