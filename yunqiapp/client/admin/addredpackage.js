@@ -1,7 +1,7 @@
 Template.addredpackage.events({
     "click .btnaddredpackage": function () {
            console.log("click btn add redpackage");
-          // event.preventDefault();
+           event.preventDefault();
           // var productname= $('#productname').val();
           // var productprice= $('#productprice').val();
           // var stockqty= $('#stockqty').val();

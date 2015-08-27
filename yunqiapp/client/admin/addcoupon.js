@@ -1,7 +1,7 @@
 Template.addcoupon.events({
     "click .btnaddcoupon": function () {
           console.log("click btn add coupon");
-          // event.preventDefault();
+          event.preventDefault();
           // var productname= $('#productname').val();
           // var productprice= $('#productprice').val();
           // var stockqty= $('#stockqty').val();

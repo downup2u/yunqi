@@ -1,7 +1,7 @@
 Template.addsalespromotion.events({
     "click .btnsalespromotion": function () {
            console.log("click btn add salespromotion");
-          // event.preventDefault();
+           event.preventDefault();
           // var productname= $('#productname').val();
           // var productprice= $('#productprice').val();
           // var stockqty= $('#stockqty').val();
