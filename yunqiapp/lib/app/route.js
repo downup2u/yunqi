@@ -13,9 +13,9 @@ Router.route('/profile', function () {
   if (Meteor.user()) {
      console.log("login");
      var currentUserId = Meteor.userId();
-     var countallorders = Order.find({createuser:currentUserId}).count();
-     var countneworders = Order.find({createuser:currentUserId,orderstatus:'neworder'}).count();
-     var countpayedorders = Order.find({createuser:currentUserId,orderstatus:'payedorder'}).count();
+     var countallorders = Orders.find({createuser:currentUserId}).count();
+     var countneworders = Orders.find({createuser:currentUserId,orderstatus:'neworder'}).count();
+     var countpayedorders = Orders.find({createuser:currentUserId,orderstatus:'payedorder'}).count();
      this.render('profile', {to: 'content',data:{
          countallorders:countallorders,
          countneworders:countneworders,
@@ -148,7 +148,7 @@ Router.route('/homedetail/ddxq/:_tabindex/:_id', function () {
     //     this.render('tabheader2', {to: 'tabheader'});
     //     this.render('allclosedorders', {to: 'orderscontent'});
     // }
-   curorder = Order.findOne({_id:this.params._id});
+   curorder = Orders.findOne({_id:this.params._id});
    this.render('orderproduct', {data:{tabindex:this.params._tabindex,order:curorder}});
    this.render('ddxq', {to: 'detailpagecontent',data:{tabindex:this.params._tabindex,order:curorder}});
    var id = this.params._id; // "5"

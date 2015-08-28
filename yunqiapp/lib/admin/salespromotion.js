@@ -2,11 +2,11 @@ if(Meteor.isServer){
 		Meteor.methods({
 			'insertSalespromotion': function(salespromotionDoc){
 				//var currentUserId = Meteor.userId();
-				Coupons.insert(salespromotionDoc);
+				SalesPromotions.insert(salespromotionDoc);
 			},
 			
 			'updateSalespromotion':function(id,salespromotionDoc){
-				Coupons.update(id, {$set:salespromotionDoc});
+				SalesPromotions.update(id, {$set:salespromotionDoc});
 			}
 		});
 	};

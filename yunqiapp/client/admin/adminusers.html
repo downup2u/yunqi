@@ -13,16 +13,16 @@
 			</tr>
 		</thread>
 		<tbody>
-			 {{#each products}}
+			 {{#each users}}
 			<tr>
 				<td>{{_id}}</td>
-				<td>{{productname}}</td>
+				<td>{{username}}</td>
 				<td>{{createtime}}</td>
-				<td>{{productprice}}</td>
-				<td>{{stockqty}}</td>
-				<td>{{status}}</td>
-				<td><a href="/admin/updateproduct/{{_id}}">修改</a>
-				<a href="#" class="btnsetoffline">下架</a>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="/admin/adminuserinfo/{{_id}}">用户详情</a>
+				
 				</td>
 			</tr>
 			{{/each}}

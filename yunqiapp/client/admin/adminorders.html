@@ -17,9 +17,9 @@
 			</tr>
 		</thread>
 		<tbody>
-			 {{#each products}}
+			 {{#each orders}}
 			<tr>
-				<td><a href="/order/{{_id}}">{{orderno}}</a></td>
+				<td><a href="/admin/adminorderinfo/{{_id}}">{{orderno}}</a></td>
 				<td>{{createuser}}</td>
 				<td>{{createtime}}</td>
 				<td>{{orderamount}}</td>
@@ -28,7 +28,7 @@
 				<td>{{contacttel}}</td>
 				<td>{{yunqimemo}}</td>
 				<td><a href="/admin/updateorder/{{_id}}">发货</a>
-		
+						
 				</td>
 			</tr>
 			{{/each}}

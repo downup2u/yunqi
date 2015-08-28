@@ -1,10 +1,10 @@
-Order = new Mongo.Collection('order');
+Orders = new Mongo.Collection('orders');
 
 EasySearch.createSearchIndex('order', {
   field: [
     'orderno',
   ],
-  collection: Order,
+  collection: Orders,
   limit: 20,
   query: function (searchString, opts) {
     console.log(searchString);
@@ -30,7 +30,7 @@ if(Meteor.isServer){
 	Meteor.methods({
 		'insertOrder': function(orderData){
 		//var currentUserId = Meteor.userId();
-  	Order.insert(orderData);
+  	Orders.insert(orderData);
 		}
 	});
 	
