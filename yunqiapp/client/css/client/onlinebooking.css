@@ -833,7 +833,7 @@ ul.roundyellow {
 }
 .footReturn {
     display: block;
-    margin: 11px auto;
+    margin: 11px 5px;
     padding: 0;
 	position: relative;
 }

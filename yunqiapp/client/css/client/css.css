@@ -1015,8 +1015,20 @@ a:hover {
 	display: block;
 	height: 32px;
 	line-height: 32px;
-	margin-left: -10px;
 	padding: 5px 5px;
+	padding-left: 10px; border-radius:5px;
+	width:100%;
+	
+}
+#SignInForm .log_box li.username {
+-webkit-appearance: textfield;
+	border: 1px solid #ddd; background:#fff;
+	
+	border-radius: 5px; margin-bottom:10px;
+	display: block;
+	height: 50px;
+	line-height: 32px;
+	padding: 10px;
 	padding-left: 10px; border-radius:5px;
 	width:100%;
 	
@@ -1113,7 +1125,7 @@ a:hover {
 .reg_findpwd a {
 	color: #1b6ded;
 	text-decoration: none;
-	padding-left: 10px;
+	padding-left: 20px;
 }
 /*footer*/
 footer, header, hgroup, menu, nav, section {

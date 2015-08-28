@@ -20,7 +20,7 @@ body .mainmenu li{ float:left; padding-bottom:10px; border-right:1px solid #ddd;
 width: 49.5%;   background:#fff; overflow:hidden;}
 
 body .mainmenu li a{ display:block;  color:#FFF; font-family:microsoft yahei;    text-align:center }
-body .mainmenu li a b{ display:block;  height:80px; padding-top:10px; }
+body .mainmenu li a b{ display:block;  height:80px; }
 body .mainmenu li a img{ margin: 10px auto 0px;
 width: 70px;
 height:70px;}
