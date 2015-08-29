@@ -14,6 +14,13 @@ cp nginx/nginx.conf /etc/nginx/nginx.conf
 /etc/init.d/nginx restart
 apt-get install unzip  -y
 
+cd yunqiapp
+meteor build .
+tar -zxf yunqiapp.tar.gz
+cd bundle/programs/server 
+npm install
+cd ${BASEPATH}
+
 chmod +x ./startyunqi.sh
 dos2unix ./startyunqi.sh
 

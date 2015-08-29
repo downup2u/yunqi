@@ -1,3 +1,1 @@
-export MONGO_URL='mongodb://localhost:28045/'
-#meteor --port 6001
-/usr/sbin/node [curpath]/main.js
+PORT=3000 MONGO_URL=mongodb://localhost:28045/yunqidb ROOT_URL=http://yunqi.czjcd.com /usr/sbin/node [curpath]/bundle/main.js
