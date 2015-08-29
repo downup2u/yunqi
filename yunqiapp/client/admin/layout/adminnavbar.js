@@ -8,32 +8,32 @@ Template.adminnavbar.helpers({
     var navlists = [
         {
           navurl:'/admin/navproducts',
-          navico:'am-icon-rocket',
+          navico:'glyphicon glyphicon-tower',
           navtitle:'产品管理'            
         },
         {
           navurl:'/admin/navorders',
-          navico:'am-icon-bolt',
+          navico:'glyphicon glyphicon-th-list',
           navtitle:'订单管理'            
         },
         {
           navurl:'/admin/navusers',
-          navico:'am-icon-user-md',
+          navico:'glyphicon glyphicon-user',
           navtitle:'用户管理'            
         },
         {
           navurl:'/admin/navsalespromotions',
-          navico:'am-icon-gift',
+          navico:'glyphicon glyphicon-tag',
           navtitle:'促销管理'            
         },
         {
           navurl:'/admin/navcoupons',
-          navico:'am-icon-ticket',
+          navico:'jcd_icon jcd_icon_offsell',
           navtitle:'优惠券管理'            
         },
         {
           navurl:'/admin/navredpackages',
-          navico:'am-icon-tablet',
+          navico:'jcd_icon jcd_icon_bonus',
           navtitle:'红包管理'            
         },
     ];

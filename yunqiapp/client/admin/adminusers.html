@@ -1,39 +1,32 @@
 <template name="adminusers">
-		
-	  <div class="am-cf am-padding">
-      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">用户管理</strong> </div>
-    </div>
-	
-	    <div class="am-g">
-      <div class="am-u-sm-12">
-        <form class="am-form">
-          <table class="am-table am-table-striped am-table-hover table-main">
-            <thead>
-              <tr>
-                <th class="table-check"><input type="checkbox" /></th><th class="table-id">用户id</th><th class="table-title">用户名</th><th class="table-type">新建时间</th><th class="table-author am-hide-sm-only">默认地址</th><th class="table-date am-hide-sm-only">联系人</th><th class="table-set">电话</th><th>备注</th>
-              </tr>
-          </thead>
-          <tbody>
-            
-              
-			   {{#each users}}
+	<div class='jcd_admin_title'>
+		用户管理
+	</div>
+	<div class="panel panel-default">
+		<!-- Table -->
+		<table class='table jdc_admin_table'>
 			<tr>
-				<td><input type="checkbox" /></td>
+				<th>用户id</th>
+				<th>用户名</th>
+				<th>注册时间</th>
+				<th>默认地址</th>
+				<th>联系人</th>
+				<th>电话</th>
+				<th class='jdc_admin_table_right'>备注</th>
+			</tr>
+			{{#each users}}
+			<tr>
 				<td>{{_id}}</td>
 				<td>{{username}}</td>
 				<td>{{createtime}}</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><a href="/admin/adminuserinfo/{{_id}}"><span class="am-icon-pencil-square-o"></span>用户详情</a>
-				
+				<td>{{productprice}}</td>
+				<td>{{stockqty}}</td>
+				<td>{{status}}</td>
+				<td class='jdc_admin_table_right'>
+					<a href="/admin/adminuserinfo/{{_id}}" class="btn btn-primary"><span class="glyphicon glyphicon-user"></span>用户详情</a>
 				</td>
 			</tr>
 			{{/each}}
-              
-		</tbody>
-	</table>
-        </form>
-      </div>
-	    </div>
-	</template>
+		</table>
+	</div>
+</template>
