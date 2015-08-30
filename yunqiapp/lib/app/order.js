@@ -1,4 +1,4 @@
-Orders = new Mongo.Collection('orders');
+
 
 EasySearch.createSearchIndex('order', {
   field: [
